@@ -1,0 +1,12 @@
+body {
+  padding-top: 24px;
+  background-color: whitesmoke;
+}
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  border: 0;
+  background-color: whitesmoke;
+}
+.qr-preview {
+  max-width: 280px;
+}

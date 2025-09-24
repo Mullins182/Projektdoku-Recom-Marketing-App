@@ -1,0 +1,59 @@
+\vspace{7pt}
+\begin{center}
+\begin{tikzpicture}[
+  font=\sffamily\itshape\fontsize{13}{15}\selectfont,
+  actor/.style={draw, minimum size=1cm},
+  include/.style={dashed,->,>=latex}
+]
+
+    % Funktion zum Zeichnen eines Strichmännchens
+    \newcommand{\actor}[3]{%
+        % Kopf
+        \draw (#1,#2) circle (0.3);
+        % Körper
+        \draw (#1,#2-0.3) -- (#1,#2-1);
+        % Arme
+        \draw (#1-0.5,#2-0.6) -- (#1+0.5,#2-0.6);
+        % Beine
+        \draw (#1,#2-1) -- (#1-0.5,#2-1.5);
+        \draw (#1,#2-1) -- (#1+0.5,#2-1.5);
+        % Name
+        \node[below=1.7cm] at (#1,#2) {#3};
+    }
+
+    % Systemgrenze
+    \draw[thick, fill=yellow!10]
+        (-7,-11) rectangle (2.75,4)
+        node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!25] {Empfehlungsmarketing-App};
+
+    % Akteure (Strichmännchen)
+    \actor{-8.5}{2}{Werber}
+    \actor{-8.5}{-2}{Geworbener}
+    \actor{4.5}{2}{Mitarbeiter}
+
+    % Use Cases
+    % \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm] (ucPIN) at (-2,2) {PIN validieren};
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
+    text width=5cm, align=center] (ucLogin) at (-2,2) {Einloggen in Mitarbeiterbereich};
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
+    text width=5cm, align=center] (ucRedeem) at (-2,-2) {Gutschein prüfen / entwerten};
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
+    text width=5cm, align=center] (ucRegister) at (-2,-4.0) {Registrieren mit Email-Adresse};
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm, text width=5cm, align=center] (ucSendMail) at (-2,-8.0) {Affiliate-Link und/oder Gutschein senden};
+
+    % Verbindungen zu Akteuren
+    \draw (-7.5,1.0) -- (ucRegister.west);
+    \draw (-7.5,-3.0) -- (ucRegister.west);
+    \draw (3.5,1.4) -- (ucRedeem.east);
+    \draw (3.5,1.4) -- (ucLogin.east);
+
+    % Gutschein entwerten <<include>> Einloggen  (Pflicht-Abhängigkeit)
+    \draw[include] (ucRedeem.north) --
+    node[right,sloped,above]{\fontsize{12}{14}\selectfont\bfseries <<include>>}
+    (ucLogin.south);
+    \draw[include] (ucRegister.south) --
+    node[right,sloped,above]{\fontsize{12}{14}\selectfont\bfseries <<include>>}
+    (ucSendMail.north);
+
+\end{tikzpicture}
+\end{center}

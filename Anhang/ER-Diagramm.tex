@@ -1,0 +1,84 @@
+\begin{tikzpicture}[
+  font=\sffamily\small,
+  >=Latex,
+  node distance=18mm and 24mm,
+  entity/.style={
+    draw,
+    rounded corners,
+    fill=blue!5,
+    align=left,
+    inner sep=3.5mm,
+    minimum width=4.4cm,
+    text depth=0pt
+  },
+  rel/.style={-Latex, thick},
+  card/.style={midway, fill=white, inner sep=1pt}
+]
+
+% --- Entities ---------------------------------------------------
+\node[entity] (users) {\textbf{users}\\
+  \pk{id (PK)}\\
+  \attr{email\_enc}\\
+  \attr{email\_iv}\\
+  \attr{email\_tag}\\
+  \attr{email\_hash}\\
+  \attr{referral\_code}\\
+  \fk{referrer\_id (FK)}\\
+  \attr{created\_at}
+};
+
+\node[entity, right=of users] (vouchers) {\textbf{vouchers}\\
+  \pk{id (PK)}\\
+  \fk{user\_id (FK)}\\
+  \attr{code}\\
+  \attr{discount\_percent}\\
+  \attr{expires\_at}\\
+  \attr{created\_at}
+};
+
+\node[entity, below=of vouchers] (redemptions) {\textbf{redemptions}\\
+  \pk{id (PK)}\\
+  \fk{voucher\_id (FK)}\\
+  \fk{employee\_id (FK)}\\
+  \attr{redeemed\_at}
+};
+
+\node[entity, below=of users] (maillog) {\textbf{mail\_log}\\
+  \pk{id (PK)}\\
+  \fk{to\_user\_id (FK)}\\
+  \attr{subject}\\
+  \attr{success}\\
+  \attr{error}\\
+  \attr{created\_at}
+};
+
+\node[entity, below=of redemptions] (employees) {\textbf{employees}\\
+  \pk{id (PK)}\\
+  \attr{first\_name}\\
+  \attr{last\_name}\\
+  \attr{email}\\
+  \attr{created\_at}
+};
+
+% --- Relationships ----------------------------------------------
+\draw[rel] (users) -- 
+  node[card, xshift=-20pt] {1} 
+  node[card, pos=0.8, xshift=-2pt] {N} 
+  (vouchers);
+
+\draw[rel] (vouchers) -- 
+  node[card, xshift=7pt, yshift=15] {1} 
+  node[card, pos=0.8, xshift=7pt, yshift=3] {1} 
+  (redemptions);
+
+\draw[rel] (employees) -- 
+  node[card, xshift=7pt, yshift=-13] {1} 
+  node[card, pos=0.8, xshift=7pt, yshift=-1] {N} 
+  (redemptions);
+
+\draw[rel] (users) -- 
+  node[card, xshift=7pt, yshift=13] {1} 
+  node[card, pos=0.8, xshift=7pt, yshift=0] {N} 
+  (maillog);
+\end{tikzpicture}
+\caption{Vereinfachtes Datenbankschema (MySQL)}

@@ -1,0 +1,42 @@
+\subsection{Lastenheft (Auszug)}
+\label{app:Lastenheft}
+Es folgt ein Auszug aus dem Lastenheft mit Fokus auf die Anforderungen:
+
+Die Anwendung muss folgende Anforderungen erfüllen: 
+\begin{enumerate}[itemsep=0em,partopsep=0em,parsep=0em,topsep=0em]
+\item Benutzeroberfläche (\ac{GUI})
+	\begin{enumerate}
+	\item Die Webanwendung muss über ein \ac{GUI} verfügen, über das sich sowohl 
+    Kunden, als auch Interessenten mit ihrer Email-Adresse
+    registrieren können.
+	\item Das Design des \ac{GUI} soll schlicht und modern gehalten werden.
+        \item Außerdem soll es einen Mitarbeiterbereich mit Login geben,
+        in dem Mitarbeiter die Möglichkeit haben den \ac{QR}-Code von Gutscheinen
+        zu scannen und die Gültigkeit zu überprüfen, sowie den Gutschein zu entwerten.
+	\end{enumerate}
+\item Responsives Design
+	\begin{enumerate}
+	\item Die Webanwendung soll in allen gängigen Browsern funktionieren.
+        \item Sie soll auf Monitoren aller Größen über den PC nutzbar sein.
+        \item Außerdem soll sie über mobile Geräte nutzbar sein.
+	\end{enumerate}
+\item Sicherheit und Datenschutz
+	\begin{enumerate}
+        \item Die Kundendaten (Email-Adresse) sollen in verschlüsselter Form
+        in der Datenbank gespeichert werden, um sensible Daten zusätzlich zu 
+        schützen
+        \item Die Datenübertragungen sollen mit \ac{SSL/TLS} gesichert sein.
+        \item Die \ac{DSGVO} Konformität soll gewährleistet sein.
+	\end{enumerate}
+\item Automatische Affiliate-Link und Gutscheinerzeugung und Versand (Backend)
+        \begin{enumerate}
+            \item Bei Registrierung eines Kunden per Email-Adresse soll dieser 
+            automatisch einen Affiliate-Link zugesandt bekommen, welcher mit seiner
+            user\_id in der Datenbank assoziiert ist.
+            \item Registriert sich ein Interessent durch Aufruf des Affiliate-Links eines Kunden, soll dem Interessenten ein Affiliate-Link und ein Gutschein
+            im \ac{PDF}-Format, inklusive \ac{QR}-Code zum Einlösen des Gutscheins, 
+            automatisch zugesandt werden. 
+            \item Wird der Gutschein eines Interessenten durch einen Mitarbeiter durch Scannen des \ac{QR}-Codes auf dem Gutschein eingelöst, soll dem Kunden (Werber) ebenfalls ein Gutschein im \ac{PDF}-Format erzeugt und zugesandt werden.
+        \end{enumerate}
+\end{enumerate}
+

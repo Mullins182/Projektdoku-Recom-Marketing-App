@@ -1,0 +1,49 @@
+\section{Projektplanung}
+\label{sec:Projektplanung}
+
+\subsection{Projektphasen}
+\label{sec:Projektphasen}
+Es wurde das Wasserfallmodell eingesetzt:
+\begin{itemize}
+  \item \textbf{Analyse}
+  \item \textbf{Entwurf}
+  \item \textbf{Implementierung}
+  \item \textbf{Test}
+  \item \textbf{Wartung}
+\end{itemize}
+
+\subsection{Abweichungen vom Projektantrag}
+\label{sec:AbweichungenProjektantrag}
+
+\begin{itemize}
+	\item Detaillierte Projektbeschreibung
+    \begin{itemize}
+        \item Die Angabe, dass der Geworbene nur einen Rabatt erhält wenn er eine Brille kauft ist nicht richtig. Es wird vom Auftraggeber noch entschieden, für welche Produkte eine Rabattierung möglich ist.
+        \item Dem Geworbenen wird ebenfalls ein Affiliate-Link zusätzlich zum Gutschein zugesandt, da dieser dann ebenfalls einen Anreiz hat diesen zu teilen um weitere Gutscheine zu erhalten.
+        \item Die Angabe, dass die Gutscheine ihre Gültigkeit nicht verlieren sollen beruht auf einem Missverständnis zwischen mir und meinem Chef. Die Gutscheine sollen nach der Einlösung entwertet werden.
+        \item Die Frontend-Library qr-scanner wird ersetzt durch \ac{ZXing} für den QR-Code-Scan zum Einlösen von Gutscheinen, da diese Library häufig genutzt wird in der Softwareentwicklung und sehr zuverlässig und schnell QR-Codes erkennt.
+    \end{itemize}
+        \item Projektphasen
+    \begin{itemize}
+        \item Der angegebene geschätzte Zeitbedarf der einzelnen Phasen hat sich nun geändert, aufgrund meiner Neueinschätzung. Die Phase Wartung entfällt, da die Inbetriebnahme der Anwendung beim Kunden nicht Bestandteil meiner Projektarbeit sein soll (Vorgabe meines Praktikumsbetriebs).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Ressourcen und Werkzeuge}
+\begin{itemize}
+  \item \textbf{Frontend:} \ac{HTML}5, \ac{CSS}3, JavaScript, Bootstrap 5.3
+  \item \textbf{Backend:} \ac{PHP} 8.1, Composer, MySQL
+  \item \textbf{Libraries:} vlucas/phpdotenv, \ac{PHP}Mailer (Mailversand), \ac{DOM}\ac{PDF} (PDF-Erzeugung), endroid/qr-code (QR-Codes erzeugen), \ac{ZXing}
+  \item \textbf{Datenbank:} My\ac{SQL} (\ac{Cloud}-gehostet)
+  \item \textbf{Sicherheit:} PDO, \ac{AES}-256-GCM, HTTPS, \ac{CSRF}-Tokens, Mitarbeiter-Login (PIN)
+  \item \textbf{Sonstiges:} \ac{VS Code}, \ac{Git}/\ac{GitHub}, FileZilla \ac{FTP}-Client
+\end{itemize}
+
+\subsection{Zeitplanung}
+\begin{itemize}
+  \item Analyse: 2~h
+  \item Entwurf: 16~h
+  \item Implementierung: 59~h
+  \item Test/Abnahme: 3~h
+\end{itemize}
+\newpage

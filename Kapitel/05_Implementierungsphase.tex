@@ -1,0 +1,49 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Implementierungsphase} 
+\label{sec:Implementierungsphase}
+
+\subsection{Implementierung der Datenstrukturen}
+\label{sec:ImplementierungDatenstrukturen}
+
+Zu Beginn der Implementierungsphase habe ich die Datenbankstruktur auf Basis des in der Entwurfsphase erstellten ER-Modells in MySQL umgesetzt.
+Die Tabellen für Benutzer, Gutscheine, Einlösungen und das Mail-Log habe ich in einer separaten SQL-Datei (\texttt{schema.sql}) definiert und anschließend per MySQL-Client importiert.
+
+\lstinputlisting[language=sql, caption={SQL-Definition der zentralen Tabellen}]{Listings/schema.sql}
+
+Die Verbindung zur Datenbank wird über eine zentrale \texttt{Database}-Klasse hergestellt, die \acs{PDO} als Schnittstelle nutzt.
+Wichtig war mir, die Verbindung parametrisiert über Umgebungsvariablen (\texttt{.env}-Datei) zu gestalten, um den Host, Port oder Socket, SMTP-Zugangsdaten, Secret \usw flexibel ändern zu können und die sensiblen Daten zu schützen, da ich gleichzeitig eine Serverkonfigurationsdatei (.htaccess) erstellt habe, die den Zugriff auf die Datei mit den Umgebungsvariablen per URL verhindert (HTTP 403 - Forbidden Access Error bei Zugriffsversuch).
+Ebenso habe ich \acs{PDO} im Exception-Modus aktiviert, um Fehler frühzeitig zu erkennen.
+
+\lstinputlisting[language=php, caption={Konstruktor der Database-Klasse}]{Listings/constructor-db.php}
+
+\subsection{Implementierung der Benutzeroberfläche}
+\label{sec:ImplementierungBenutzeroberflaeche}
+
+Die Benutzeroberfläche besteht aus drei HTML-Seiten (\texttt{index.html}, \texttt{employee.html}, \texttt{redeem.html}),
+die ich mit Bootstrap und einem eigenen Stylesheet gestaltet habe.
+Das Corporate Design ist schlicht, mit klaren Flächen und gut lesbaren Schriften.
+Farblich habe ich mich für eine dezente Hintergrundfarbe (\texttt{whitesmoke}) und klare Kontraste bei Buttons und Formularen entschieden.
+Durch eigene CSS-Klassen konnte ich \zB die Darstellung des Videoausschnitts im Mitarbeiterbereich optimieren.
+
+\lstinputlisting[language=html, caption={Auszug aus styles.css}]{Listings/styles.css}
+
+Die Interaktivität im Frontend habe ich mit JavaScript umgesetzt. 
+Hierzu gehört \zB die Anzeige von Rückmeldungen in einer Bootstrap-Alert-Box.
+Für die API-Kommunikation verwende ich die \texttt{fetch}-Funktion mit asynchronen Funktionen.
+
+\lstinputlisting[language=php, caption={Hilfsfunktion zur API-Kommunikation}]{Listings/fetch.js}
+
+\subsection{Implementierung der Geschäftslogik}
+\label{sec:ImplementierungGeschaeftslogik}
+
+Die Geschäftslogik habe ich in einzelne PHP-Klassen aufgeteilt, um den Code übersichtlich zu halten.
+Ein wichtiger Bestandteil ist die Klasse \texttt{Voucher}, die die Erstellung von Gutscheinen übernimmt.
+Dabei wird ein eindeutiger Code generiert, in der Datenbank gespeichert und optional ein Ablaufdatum gesetzt.
+Zusätzlich wird aus den Gutschein-Daten direkt ein PDF mit QR-Code erzeugt, das per E-Mail an den Werber \bzw Geworbenen gesendet wird.
+
+\lstinputlisting[language=php, caption={Auszug aus der Voucher-Klasse}]{Listings/voucher.php}
+
+Das QR-Code- und PDF-Rendering erfolgt direkt in PHP über die Bibliotheken \texttt{endroid/qr-code} und \texttt{dompdf/dompdf}.
+So konnte ich sicherstellen, dass der komplette Prozess (vom Erstellen bis zum Versenden) serverseitig abläuft.
+
+Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im Anhang~\textit{\ref{sec:screenshots}}.

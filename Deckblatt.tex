@@ -1,0 +1,48 @@
+% !TEX root = Projektdokumentation.tex
+
+% Temporär: Kopf-/Fußbereiche NICHT berücksichtigen, damit echte Seitenmitte gilt
+\newgeometry{
+  left=25mm, right=25mm, top=25mm, bottom=25mm,
+  includehead=false, includefoot=false
+}
+
+\begin{titlepage}
+  \pagestyle{empty}    % gesamte Seite ohne Kopf-/Fußzeile
+  \thispagestyle{empty}
+
+  \begin{center}
+    \vspace*{\fill}
+    \begin{minipage}{0.9\textwidth}
+      \centering
+
+      \includegraphics[height=18mm]{LogoIHK.pdf}\\[1ex]
+      \Large{Abschlussprüfung \pruefungstermin}\\[3ex]
+
+      \Large{\ausbildungsberuf}\\
+      \LARGE{\betreff}\\[4ex]
+
+      \huge{\textbf{\titel}}\\[1.5ex]
+      \Large{\textbf{\untertitel}}\\[4ex]
+
+      \normalsize
+      Abgabetermin: \abgabeOrt, den \abgabeTermin\\[3em]
+      \textbf{Prüfungsbewerber:}\\
+      \autorName\\
+      \autorAnschrift\\
+      \autorOrt\\[5ex]
+
+      \textbf{Ausbildungsbetrieb:}\\
+      \betriebName\\
+      \betriebAnschrift\\
+      \betriebOrt\\[5em]
+
+      \includegraphics[height=35mm]{Bilder/ananas_codes.png}\\[2ex]
+    \end{minipage}
+    \vspace*{\fill}
+  \end{center}
+
+  % Titelblatt-Seite wirklich leer lassen (KOMA setzt am Ende gerne 'plain'):
+  \thispagestyle{empty}
+\end{titlepage}
+
+\restoregeometry

@@ -1,0 +1,110 @@
+% !TEX root = ../Projektdokumentation.tex
+
+% Seitenränder -----------------------------------------------------------------
+\setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
+\geometry{
+  a4paper,
+  left=25mm,        % linker Rand
+  right=25mm,       % rechter Rand
+  top=7mm,          % oberer Rand inkl. Kopfzeile -> Kopf rückt höher
+  bottom=25mm,      % unterer Rand
+  includehead,      % Kopfbereich in die Berechnung einbeziehen
+  includefoot,      % Fußbereich in die Berechnung einbeziehen
+  headsep=8mm,      % Abstand Kopfzeile -> Textblock
+  footskip=12mm     % Abstand Textblock -> Fußzeile
+}
+
+\makeatletter
+\makeatother
+
+
+% Kopf-/Fußzeilen mit KOMA-Script ---------------------------------------------
+\usepackage[
+  automark,   % Kapitel-/Abschnittsangaben in Kopfzeile automatisch erstellen
+  headsepline,% Trennlinie unter der Kopfzeile
+  ilines      % Trennlinie linksbündig ausrichten
+]{scrlayer-scrpage}
+
+% --- EINSTELLUNG: Höhe des Logos im Header (einfach hier ändern) -------------
+\newlength{\HeaderLogoHeight}
+\setlength{\HeaderLogoHeight}{23mm} % <- Höhe des Logos in der Kopfzeile
+
+% Kopf- und Fußzeilen ----------------------------------------------------------
+\clearpairofpagestyles
+\pagestyle{scrheadings}
+
+% Kopfzeile
+\renewcommand{\headfont}{\normalfont} % Schriftform der Kopfzeile
+\ihead{%
+  \large\textsc{\titel}\\
+  \small\untertitel \\[2ex]
+  \textit{\headmark}%
+}
+\chead{}
+\ohead{\includegraphics[height=\HeaderLogoHeight]{\betriebLogo}}
+
+% Headheight passend zum Logo und Text (ohne geometry anzufassen)
+\setlength{\headheight}{\dimexpr \HeaderLogoHeight + 12pt\relax}
+
+% Fußzeile
+\ifoot*{\autorName}
+\cfoot*{\pagemark}   % <-- Seitenzahl jetzt zentriert
+\ofoot*{}            % rechts leer
+
+% Überschriften nach DIN 5008 in einer Fluchtlinie -----------------------------
+
+% Abstand zwischen Nummerierung und Überschrift definieren
+\newcommand{\headingSpace}{1.5cm}
+
+% Abschnittsüberschriften im selben Stil wie beim Inhaltsverzeichnis einrücken
+\renewcommand*{\othersectionlevelsformat}[3]{%
+  \makebox[\headingSpace][l]{#3\autodot}%
+}
+
+% Für die Einrückung wird das Paket tocloft benötigt
+\cftsetindents{section}{0.0cm}{\headingSpace}
+\cftsetindents{subsection}{0.0cm}{\headingSpace}
+\cftsetindents{subsubsection}{0.0cm}{\headingSpace}
+\cftsetindents{figure}{0.0cm}{\headingSpace}
+\cftsetindents{table}{0.0cm}{\headingSpace}
+
+% Allgemeines ------------------------------------------------------------------
+\onehalfspacing % Zeilenabstand 1,5 Zeilen
+\frenchspacing  % erzeugt ein wenig mehr Platz hinter einem Punkt
+
+% Schusterjungen und Hurenkinder vermeiden
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+% Quellcode-Ausgabe formatieren
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, breaklines=true}
+\lstset{emph={square}, emphstyle=\color{red}, emph={[2]root,base}, emphstyle={[2]\color{blue}}}
+
+\counterwithout{footnote}{section} % Fußnoten fortlaufend durchnummerieren
+\setcounter{tocdepth}{3}           % bis subsubsection ins Inhaltsverzeichnis
+\setcounter{secnumdepth}{3}        % bis subsubsection nummerieren
+
+% Aufzählungen anpassen
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+% Tabellenfärbung:
+\definecolor{heading}{rgb}{0.64,0.78,0.86}
+\definecolor{odd}{rgb}{0.9,0.9,0.9}
+
+% Seitenstil für Verzeichnisse: Kopf behalten, Fuß leer
+\newpairofpagestyles{verzeichnis}{
+  \ihead{%
+    \large\textsc{\titel}\\
+    \small\untertitel \\[2ex]
+    \textit{\headmark}%
+  }
+  \chead{}
+  \ohead{\includegraphics[height=\HeaderLogoHeight]{\betriebLogo}}
+  % Fußzeile komplett leer:
+  \ifoot{}
+  \cfoot{}
+  \ofoot{}
+}
