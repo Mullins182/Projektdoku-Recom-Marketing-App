@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  24 SEP 2025 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  24 SEP 2025 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,16 +1328,22 @@ LaTeX Warning: Hyper reference `acro:SQL' on page III undefined on input line 36
 LaTeX Warning: Hyper reference `acro:SQL' on page III undefined on input line 36.
 
 
-LaTeX Warning: Hyper reference `acro:VS Code' on page III undefined on input line 39.
+LaTeX Warning: Hyper reference `acro:URL' on page III undefined on input line 39.
 
 
-LaTeX Warning: Hyper reference `acro:VS Code' on page III undefined on input line 39.
+LaTeX Warning: Hyper reference `acro:URL' on page III undefined on input line 39.
 
 
-LaTeX Warning: Hyper reference `acro:ZXing' on page III undefined on input line 41.
+LaTeX Warning: Hyper reference `acro:VS Code' on page III undefined on input line 40.
 
 
-LaTeX Warning: Hyper reference `acro:ZXing' on page III undefined on input line 41.
+LaTeX Warning: Hyper reference `acro:VS Code' on page III undefined on input line 40.
+
+
+LaTeX Warning: Hyper reference `acro:ZXing' on page III undefined on input line 42.
+
+
+LaTeX Warning: Hyper reference `acro:ZXing' on page III undefined on input line 42.
 
 )
 
@@ -1605,12 +1611,12 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 34.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [4] (Anhang/Screenshots.tex
-<Bilder/screenshots/form_blank.png, id=475, 476.53032pt x 322.95656pt>
+<Bilder/screenshots/form_blank.png, id=477, 476.53032pt x 322.95656pt>
 File: Bilder/screenshots/form_blank.png Graphic file (type png)
 <use Bilder/screenshots/form_blank.png>
 Package pdftex.def Info: Bilder/screenshots/form_blank.png  used on input line 4.
 (pdftex.def)             Requested size: 364.19667pt x 246.8392pt.
-<Bilder/screenshots/form_registered.png, id=476, 494.59781pt x 471.26062pt>
+<Bilder/screenshots/form_registered.png, id=478, 494.59781pt x 471.26062pt>
 File: Bilder/screenshots/form_registered.png Graphic file (type png)
 <use Bilder/screenshots/form_registered.png>
 Package pdftex.def Info: Bilder/screenshots/form_registered.png  used on input line 11.
@@ -1622,7 +1628,7 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 15.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [5 <./Bilder/screenshots/form_blank.png>]
-<Bilder/screenshots/form_already_registered.png, id=484, 539.76656pt x 437.38406pt>
+<Bilder/screenshots/form_already_registered.png, id=486, 539.76656pt x 437.38406pt>
 File: Bilder/screenshots/form_already_registered.png Graphic file (type png)
 <use Bilder/screenshots/form_already_registered.png>
 Package pdftex.def Info: Bilder/screenshots/form_already_registered.png  used on input line 18.
@@ -1634,12 +1640,12 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 22.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [6 <./Bilder/screenshots/form_registered.png>]
-<Bilder/screenshots/email_voucher.png, id=491, 420.82219pt x 430.60875pt>
+<Bilder/screenshots/email_voucher.png, id=493, 420.82219pt x 430.60875pt>
 File: Bilder/screenshots/email_voucher.png Graphic file (type png)
 <use Bilder/screenshots/email_voucher.png>
 Package pdftex.def Info: Bilder/screenshots/email_voucher.png  used on input line 26.
 (pdftex.def)             Requested size: 227.62206pt x 232.91948pt.
-<Bilder/screenshots/mail_affiliate_link.png, id=492, 806.26219pt x 513.41812pt>
+<Bilder/screenshots/mail_affiliate_link.png, id=494, 806.26219pt x 513.41812pt>
 File: Bilder/screenshots/mail_affiliate_link.png Graphic file (type png)
 <use Bilder/screenshots/mail_affiliate_link.png>
 Package pdftex.def Info: Bilder/screenshots/mail_affiliate_link.png  used on input line 33.
@@ -1670,17 +1676,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38316 strings out of 468130
- 788267 string characters out of 5430633
- 1705560 words of memory out of 5000000
- 65975 multiletter control sequences out of 15000+600000
+ 38322 strings out of 468130
+ 788332 string characters out of 5430633
+ 1705607 words of memory out of 5000000
+ 65980 multiletter control sequences out of 15000+600000
  713675 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,24n,110p,11424b,2583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (28 pages, 912203 bytes).
+Output written on Projektdokumentation.pdf (28 pages, 912515 bytes).
 PDF statistics:
- 771 PDF objects out of 1000 (max. 8388607)
- 236 named destinations out of 1000 (max. 500000)
+ 773 PDF objects out of 1000 (max. 8388607)
+ 237 named destinations out of 1000 (max. 500000)
  431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
