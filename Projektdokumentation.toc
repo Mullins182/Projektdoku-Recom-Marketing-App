@@ -11,38 +11,39 @@
 \contentsline {subsection}{\numberline {2.1}Projektphasen}{3}{subsection.14}%
 \contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{3}{subsection.15}%
 \contentsline {subsection}{\numberline {2.3}Ressourcen und Werkzeuge}{4}{subsection.16}%
-\contentsline {subsection}{\numberline {2.4}Zeitplanung}{4}{subsection.18}%
-\contentsline {section}{\numberline {3}Analysephase}{5}{section.19}%
-\contentsline {subsection}{\numberline {3.1}Fachliches Konzept}{5}{subsection.20}%
-\contentsline {subsection}{\numberline {3.2}Kosten (Beispiel)}{5}{subsection.21}%
-\contentsline {subsection}{\numberline {3.3}Nutzen}{5}{subsection.22}%
-\contentsline {subsection}{\numberline {3.4}Amortisation}{5}{subsection.23}%
-\contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.24}%
-\contentsline {subsection}{\numberline {4.1}Architektur}{5}{subsection.25}%
-\contentsline {subsubsection}{\numberline {4.1.1}Schichtenmodell}{5}{subsubsection.26}%
-\contentsline {paragraph}{\nonumberline Präsentationsschicht (Frontend).}{6}{paragraph*.28}%
-\contentsline {paragraph}{\nonumberline Anwendungsschicht (Controller/Services).}{6}{paragraph*.30}%
-\contentsline {paragraph}{\nonumberline Datenzugriffsschicht (Repository/Persistenz).}{6}{paragraph*.32}%
-\contentsline {subsubsection}{\numberline {4.1.2}Schichtgrenzen und Kommunikation}{6}{subsubsection.33}%
-\contentsline {subsubsection}{\numberline {4.1.3}Diagramm}{6}{subsubsection.34}%
-\contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.36}%
-\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{8}{subsection.37}%
-\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{9}{subsection.111}%
-\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{10}{subsection.136}%
-\contentsline {section}{\numberline {6}Abnahmephase}{11}{section.146}%
-\contentsline {subsection}{\numberline {6.1}Test und Qualitätssicherung}{11}{subsection.147}%
-\contentsline {subsection}{\numberline {6.2}Teststrategie}{11}{subsection.148}%
-\contentsline {subsection}{\numberline {6.3}Testmethodik}{11}{subsection.149}%
-\contentsline {subsection}{\numberline {6.4}Testergebnisse}{13}{subsection.150}%
-\contentsline {subsection}{\numberline {6.5}Zusammenfassung der Testergebnisse}{14}{subsection.153}%
-\contentsline {subsection}{\numberline {6.6}Abnahme}{14}{subsection.154}%
-\contentsline {section}{\numberline {7}Fazit}{15}{section.155}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.156}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.157}%
-\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.158}%
-\contentsline {subsection}{\numberline {A.3}Use Case-Diagramm}{iii}{subsection.175}%
-\contentsline {subsection}{\numberline {A.4}Datenbankmodell}{iv}{subsection.177}%
-\contentsline {subsection}{\numberline {A.5}Screenshots der Anwendung}{v}{subsection.179}%
-\contentsline {subsubsection}{\numberline {A.5.1}Registrierungsformular}{v}{subsubsection.180}%
-\contentsline {subsubsection}{\numberline {A.5.2}Emails an Werber oder Geworbenen}{vii}{subsubsection.184}%
+\contentsline {subsection}{\numberline {2.4}Zeitplanung}{4}{subsection.17}%
+\contentsline {section}{\numberline {3}Analysephase}{5}{section.18}%
+\contentsline {subsection}{\numberline {3.1}Fachliches Konzept}{5}{subsection.19}%
+\contentsline {subsection}{\numberline {3.2}Kosten (Beispiel)}{5}{subsection.20}%
+\contentsline {subsection}{\numberline {3.3}Nutzen}{5}{subsection.21}%
+\contentsline {subsection}{\numberline {3.4}Amortisation}{5}{subsection.22}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.23}%
+\contentsline {subsection}{\numberline {4.1}Architektur}{5}{subsection.24}%
+\contentsline {subsubsection}{\numberline {4.1.1}Schichtenmodell}{5}{subsubsection.25}%
+\contentsline {paragraph}{\nonumberline Präsentationsschicht (Frontend).}{6}{paragraph*.27}%
+\contentsline {paragraph}{\nonumberline Anwendungsschicht (Controller/Services).}{6}{paragraph*.29}%
+\contentsline {paragraph}{\nonumberline Datenzugriffsschicht (Repository/Persistenz).}{6}{paragraph*.31}%
+\contentsline {subsubsection}{\numberline {4.1.2}Schichtgrenzen und Kommunikation}{6}{subsubsection.32}%
+\contentsline {subsubsection}{\numberline {4.1.3}Diagramm}{6}{subsubsection.33}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.35}%
+\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{8}{subsection.36}%
+\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{9}{subsection.110}%
+\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{10}{subsection.135}%
+\contentsline {section}{\numberline {6}Abnahmephase}{11}{section.145}%
+\contentsline {subsection}{\numberline {6.1}Test und Qualitätssicherung}{11}{subsection.146}%
+\contentsline {subsection}{\numberline {6.2}Teststrategie}{11}{subsection.147}%
+\contentsline {subsection}{\numberline {6.3}Testmethodik}{11}{subsection.148}%
+\contentsline {subsection}{\numberline {6.4}Testergebnisse}{13}{subsection.149}%
+\contentsline {subsection}{\numberline {6.5}Zusammenfassung der Testergebnisse}{14}{subsection.152}%
+\contentsline {subsection}{\numberline {6.6}Abnahme}{14}{subsection.153}%
+\contentsline {section}{\numberline {7}Fazit}{15}{section.154}%
+\contentsline {section}{Literatur- und Quellenverzeichnis}{16}{section*.155}%
+\contentsline {section}{\numberline {A}Anhang}{I}{appendix.170}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{I}{subsection.171}%
+\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{II}{subsection.172}%
+\contentsline {subsection}{\numberline {A.3}Use Case-Diagramm}{III}{subsection.189}%
+\contentsline {subsection}{\numberline {A.4}Datenbankmodell}{IV}{subsection.191}%
+\contentsline {subsection}{\numberline {A.5}Screenshots der Anwendung}{V}{subsection.193}%
+\contentsline {subsubsection}{\numberline {A.5.1}Registrierungsformular}{V}{subsubsection.194}%
+\contentsline {subsubsection}{\numberline {A.5.2}Emails an Werber bzw.\xspace Geworbenen}{VII}{subsubsection.198}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
