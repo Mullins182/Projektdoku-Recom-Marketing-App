@@ -56,7 +56,28 @@
 
 \pagestyle{verzeichnis}
 \tableofcontents
-\clearpage
+% \clearpage
+
+\cleardoublepage
+
+\phantomsection
+\listoffigures
+\cleardoublepage
+
+\phantomsection
+\listoftables
+\cleardoublepage
+
+\phantomsection
+\lstlistoflistings
+\cleardoublepage
+
+% Literatur ------------------------------------------------------------------
+\renewcommand{\refname}{Literaturverzeichnis}
+\bibliography{Bibliographie}
+\bibliographystyle{Allgemein/natdin} % DIN-Stil des Literaturverzeichnisses
+\input{Quellenverzeichnis}
+\cleardoublepage
 
 % Abkürzungsverzeichnis -------------------------------------------------------
 \newcommand{\abkvz}{Abkürzungsverzeichnis}
@@ -75,12 +96,9 @@
 \pagestyle{scrheadings}
 \input{Inhalt.tex}
 
-% Literatur ------------------------------------------------------------------
+% EIDESSTATTLICHE ERKLÄRUNG------------------------------------------
 \clearpage
-\renewcommand{\refname}{Literaturverzeichnis}
-\bibliography{Bibliographie}
-\bibliographystyle{Allgemein/natdin} % DIN-Stil des Literaturverzeichnisses
-\input{Quellenverzeichnis}
+\input{Erklaerung.tex}
 
 % Anhang ---------------------------------------------------------------------
 \clearpage        % sorgt für sauberes Abschließen

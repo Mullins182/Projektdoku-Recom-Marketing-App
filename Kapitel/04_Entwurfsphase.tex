@@ -10,12 +10,12 @@ Die Anwendung ist in drei Schichten gegliedert:
 \paragraph{Präsentationsschicht (Frontend).}
 Aufgabe: Darstellung der Benutzeroberfläche und Entgegennahme von Eingaben.  
 Umsetzung über statische Seiten und Skripte (\texttt{public/index.html}, \texttt{public/employee.html}, \texttt{public/redeem.html}, CSS in \texttt{public/css/styles.css}, JavaScript in \texttt{public/js/app.js} und \texttt{public/js/employee.js}).  
-Die Kommunikation erfolgt ausschließlich per \texttt{fetch} (JSON) mit der Anwendungsschicht unter \texttt{php/api.php}.  
+Die Kommunikation erfolgt ausschließlich per \texttt{fetch} (\ac{JSON}) mit der Anwendungsschicht unter \texttt{php/api.php}.  
 Für die QR-Code-Erkennung in der Mitarbeiteransicht wird die @zxing-Library eingebunden.
 
 \paragraph{Anwendungsschicht (Controller/Services).}
 Aufgabe: Geschäftslogik und Ablaufsteuerung.  
-\texttt{php/api.php} dient als Controller und bietet JSON-basierte Endpunkte (\zB \textit{register}, \textit{validate\_voucher}, \textit{redeem\_voucher}, \textit{employee\_login}).  
+\texttt{php/api.php} dient als Controller und bietet \ac{JSON}-basierte Endpunkte (\zB \textit{register}, \textit{validate\_voucher}, \textit{redeem\_voucher}, \textit{employee\_login}).  
 Die Logik ist in Service-Klassen gekapselt. Dazu gehören:  
 \texttt{php/Auth.php} (Authentifizierung),  
 \texttt{php/Csrf.php} (\ac{CSRF}-Token),  
@@ -33,7 +33,7 @@ Sensible Felder werden verschlüsselt gespeichert (\texttt{users.email\_enc}, \t
 Zur Suche wird ein Hash verwendet (\texttt{users.email\_hash}).
 
 \subsubsection{Schichtgrenzen und Kommunikation}
-Das Frontend ruft ausschließlich JSON-Endpunkte der Anwendungsschicht auf.  
+Das Frontend ruft ausschließlich \ac{JSON}-Endpunkte der Anwendungsschicht auf.  
 Direkte Datenbankzugriffe aus dem Frontend finden nicht statt.  
 Die Anwendungsschicht greift nur über die Datenzugriffsschicht (PDO) auf die Datenbank zu.  
 Authentifizierung und Sitzungsverwaltung liegen in der Anwendungsschicht.  

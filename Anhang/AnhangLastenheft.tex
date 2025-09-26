@@ -7,7 +7,7 @@ Die Anwendung muss folgende Anforderungen erfüllen:
 \item Benutzeroberfläche (\ac{GUI})
 	\begin{enumerate}
 	\item Die Webanwendung muss über ein \ac{GUI} verfügen, über das sich sowohl 
-    Kunden, als auch Interessenten mit ihrer Email-Adresse
+    Werber, als auch Geworbene mit ihrer Email-Adresse
     registrieren können.
 	\item Das Design des \ac{GUI} soll schlicht und modern gehalten werden.
         \item Außerdem soll es einen Mitarbeiterbereich mit Login geben,
@@ -25,18 +25,17 @@ Die Anwendung muss folgende Anforderungen erfüllen:
         \item Die Kundendaten (Email-Adresse) sollen in verschlüsselter Form
         in der Datenbank gespeichert werden, um sensible Daten zusätzlich zu 
         schützen
-        \item Die Datenübertragungen sollen mit \ac{SSL/TLS} gesichert sein.
+        \item Die Datenübertragungen sollen mit \ac{TLS} gesichert sein.
         \item Die \ac{DSGVO} Konformität soll gewährleistet sein.
 	\end{enumerate}
-\item Automatische Affiliate-Link und Gutscheinerzeugung und Versand (Backend)
+\item Automatische Affiliate-Link / Gutscheinerzeugung und Versand (Backend)
         \begin{enumerate}
-            \item Bei Registrierung eines Kunden per Email-Adresse soll dieser 
+            \item Bei Registrierung eines Werbers per Email-Adresse soll dieser 
             automatisch einen Affiliate-Link zugesandt bekommen, welcher mit seiner
             user\_id in der Datenbank assoziiert ist.
-            \item Registriert sich ein Interessent durch Aufruf des Affiliate-Links eines Kunden, soll dem Interessenten ein Affiliate-Link und ein Gutschein
+            \item Registriert sich ein Geworbener durch Aufruf des Affiliate-Links eines Werbers, soll dem Geworbenen ein Affiliate-Link und ein Gutschein
             im \ac{PDF}-Format, inklusive \ac{QR}-Code zum Einlösen des Gutscheins, 
             automatisch zugesandt werden. 
-            \item Wird der Gutschein eines Interessenten durch einen Mitarbeiter durch Scannen des \ac{QR}-Codes auf dem Gutschein eingelöst, soll dem Kunden (Werber) ebenfalls ein Gutschein im \ac{PDF}-Format erzeugt und zugesandt werden.
+            \item Wird der Gutschein eines Geworbenen von einem Mitarbeiter durch Scannen des \ac{QR}-Codes auf dem Gutschein eingelöst, soll dem Werber ebenfalls ein Gutschein im \ac{PDF}-Format erzeugt und zugesandt werden.
         \end{enumerate}
 \end{enumerate}
-
