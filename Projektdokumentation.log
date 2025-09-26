@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  26 SEP 2025 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  26 SEP 2025 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1263,7 +1263,7 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 38.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 61.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 60.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [2] (Projektdokumentation.lof)
 \tf@lof=\write5
@@ -1273,7 +1273,7 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 61.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 65.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 64.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [3
 
@@ -1286,7 +1286,7 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 65.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 69.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 68.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [4
 
@@ -1305,7 +1305,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 6.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 73.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 72.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [5
 
@@ -1313,31 +1313,31 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 73.
 ]
 No file Projektdokumentation.bbl.
 (Quellenverzeichnis.tex
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5.
  (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (35.87012pt too wide) in paragraph at lines 5--6
+Overfull \hbox (35.87012pt too wide) in paragraph at lines 6--7
 \T1/lmtt/m/n/10.95 www . php . net / manual / en / book . pdo . php$[][] \T1/lmr/m/n/10.95 (Zu-griff am 25.09.2025). ^^V PDO-Datenbankschnittstelle 
  []
 
 
-Overfull \hbox (17.05678pt too wide) in paragraph at lines 8--9
+Overfull \hbox (17.05678pt too wide) in paragraph at lines 9--10
 []\T1/lmr/m/n/10.95 PHPMailer: PHP-Mai-ler. 2025. Ver-füg-bar un-ter: [][]$\T1/lmtt/m/n/10.95 https : / / github . com / PHPMailer / PHPMailer$[][]
  []
 
 
-Overfull \hbox (2.04361pt too wide) in paragraph at lines 10--11
+Overfull \hbox (2.04361pt too wide) in paragraph at lines 11--12
 []\T1/lmr/m/n/10.95 Endroid: endroid/qr-code. 2025. Ver-füg-bar un-ter: [][]$\T1/lmtt/m/n/10.95 https : / / github . com / endroid / qr-[]code$[][]
  []
 
 
-Overfull \hbox (32.44202pt too wide) in paragraph at lines 12--13
+Overfull \hbox (32.44202pt too wide) in paragraph at lines 13--14
 \T1/lmr/m/n/10.95 Ver-füg-bar un-ter: [][]$\T1/lmtt/m/n/10.95 https : / / cheatsheetseries . owasp . org / cheatsheets / Cross-[]Site _ Request _
  []
 
 
-Overfull \hbox (2.03186pt too wide) in paragraph at lines 14--15
+Overfull \hbox (2.03186pt too wide) in paragraph at lines 15--16
 \T1/lmr/m/n/10.95 phers (SP 800-38D). 2007. Ver-füg-bar un-ter: [][]$\T1/lmtt/m/n/10.95 https : / / doi . org / 10 . 6028 / NIST . SP . 800-[]38D$[][]
  []
 
@@ -1499,7 +1499,7 @@ LaTeX Warning: Hyper reference `acro:ZXing' on page VII undefined on input line 
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 91.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 90.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [7
 
@@ -1540,13 +1540,13 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 49.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
-[4]) (Kapitel/03_Analysephase.tex) (Kapitel/04_Entwurfsphase.tex
+[4]) (Kapitel/03_Analysephase.tex
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 16.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 18.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
-[5{C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+[5{C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) (Kapitel/04_Entwurfsphase.tex
 Overfull \hbox (48.67436pt too wide) in paragraph at lines 17--26
 [] []\T1/lmss/bx/n/10.95 Anwendungsschicht (Con-trol-ler/-Ser-vices).[][] \T1/lmr/m/n/10.95 Auf-ga-be: Ge-schäfts-lo-gik und Ab-lauf-steue-rung. \T1/lmtt/m/n/10.95 php/api.php
  []
@@ -1582,7 +1582,10 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 67.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
-[6]
+[6
+
+
+]
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
@@ -1611,14 +1614,14 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 27.
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-) (Listings/styles.css) (Listings/fetch.js) (Listings/voucher.php
+) (Listings/styles.css) (Listings/fetch.js)
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 5.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 36.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
-[10])
-Overfull \hbox (5.21957pt too wide) in paragraph at lines 46--48
+[10] (Listings/voucher.php)
+Overfull \hbox (5.21957pt too wide) in paragraph at lines 48--50
 []\T1/lmr/m/n/10.95 Das QR-Code- und PDF-Rendering er-folgt di-rekt in PHP über die Bi-blio-the-ken \T1/lmtt/m/n/10.95 endroid/qr-code
  []
 
@@ -1626,9 +1629,12 @@ Overfull \hbox (5.21957pt too wide) in paragraph at lines 46--48
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 26.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 22.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
-[11]
+[11
+
+
+]
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
@@ -1728,7 +1734,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 104.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 103.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [16
 
@@ -1824,7 +1830,7 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 41.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 113.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 112.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [9 <./Bilder/screenshots/mail_affiliate_link.png>] (Projektdokumentation.aux)
  ***********
@@ -1846,9 +1852,9 @@ Here is how much of TeX's memory you used:
  69871 multiletter control sequences out of 15000+600000
  719462 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,24n,110p,11424b,3080s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,24n,109p,11424b,3080s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (34 pages, 972263 bytes).
+Output written on Projektdokumentation.pdf (34 pages, 972521 bytes).
 PDF statistics:
  940 PDF objects out of 1000 (max. 8388607)
  279 named destinations out of 1000 (max. 500000)
