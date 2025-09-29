@@ -1,62 +1,3 @@
-% \vspace{7pt}
-% \begin{center}
-% \begin{tikzpicture}[
-%   font=\sffamily\itshape\fontsize{13}{15}\selectfont,
-%   actor/.style={draw, minimum size=1cm},
-%   include/.style={dashed,->,>=latex}
-% ]
-
-%     % Funktion zum Zeichnen eines Strichmännchens
-%     \newcommand{\actor}[3]{%
-%         % Kopf
-%         \draw (#1,#2) circle (0.3);
-%         % Körper
-%         \draw (#1,#2-0.3) -- (#1,#2-1);
-%         % Arme
-%         \draw (#1-0.5,#2-0.6) -- (#1+0.5,#2-0.6);
-%         % Beine
-%         \draw (#1,#2-1) -- (#1-0.5,#2-1.5);
-%         \draw (#1,#2-1) -- (#1+0.5,#2-1.5);
-%         % Name
-%         \node[below=1.7cm] at (#1,#2) {#3};
-%     }
-
-%     % Systemgrenze
-%     \draw[thick, fill=yellow!10]
-%         (-7,-11) rectangle (2.75,4)
-%         node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!25] {Empfehlungsmarketing-App};
-
-%     % Akteure (Strichmännchen)
-%     \actor{-8.5}{2}{Werber}
-%     \actor{-8.5}{-2}{Geworbener}
-%     \actor{4.5}{2}{Mitarbeiter}
-
-%     % Use Cases
-%     % \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm] (ucPIN) at (-2,2) {PIN validieren};
-%     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
-%     text width=5cm, align=center] (ucLogin) at (-2,2) {Einloggen in Mitarbeiterbereich};
-%     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
-%     text width=5cm, align=center] (ucRedeem) at (-2,-2) {Gutschein scannen / prüfen / entwerten};
-%     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm,
-%     text width=5cm, align=center] (ucRegister) at (-2,-4.0) {Registrieren mit Email-Adresse};
-%     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=2.5cm, text width=5cm, align=center] (ucSendMail) at (-2,-8.0) {Affiliate-Link und/oder Gutschein senden};
-
-%     % Verbindungen zu Akteuren
-%     \draw (-7.5,1.0) -- (ucRegister.west);
-%     \draw (-7.5,-3.0) -- (ucRegister.west);
-%     \draw (3.5,1.4) -- (ucRedeem.east);
-%     \draw (3.5,1.4) -- (ucLogin.east);
-
-%     % Gutschein entwerten <<include>> Einloggen  (Pflicht-Abhängigkeit)
-%     \draw[include] (ucRedeem.north) --
-%     node[right,sloped,above]{\fontsize{12}{14}\selectfont\bfseries <<include>>}
-%     (ucLogin.south);
-%     \draw[include] (ucRegister.south) --
-%     node[right,sloped,above]{\fontsize{12}{14}\selectfont\bfseries <<include>>}
-%     (ucSendMail.north);
-
-% \end{tikzpicture}
-% \end{center}
 
 \vspace{7pt}
 \begin{center}
@@ -99,7 +40,7 @@
 
     % Systemgrenze
     \draw[thick, fill=yellow!10]
-        (-7,-11) rectangle (3,5)
+        (-7,-12.1) rectangle (3,5)
         node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!25] {Empfehlungsmarketing-App};
 
     % Akteure
@@ -115,19 +56,19 @@
     text width=5cm, align=center] (ucRedeem) at (-2,-1.0) {Gutschein scannen / prüfen / entwerten};
 
     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
-    text width=2.5cm, align=center] (ucAffLink) at (-4.5,-5.0) {Affiliate-Link senden};
+    text width=2.5cm, align=center] (ucAffLink) at (-4.7,-6.5) {Affiliate-Link senden};
 
     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
-    text width=2cm, align=center] (ucVoucherSend) at (0.5,-5.0) {Gutschein senden};
+    text width=2cm, align=center] (ucVoucherSend) at (1.0,-6.5) {Gutschein senden};
 
     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
-    text width=5cm, align=center] (ucRegister) at (-2,-9.0) {Registrieren mit Email-Adresse};
+    text width=5cm, align=center] (ucRegister) at (-2,-9.4) {Registrieren mit Email-Adresse};
 
     % Verbindungen zu Akteuren
     \draw (-7.5,2.0) -- (ucRegister.west);
     \draw (-7.5,-0.5) -- (ucRegister.west);
-    \draw (3.5,2.8) -- (ucRedeem.east);
-    \draw (3.5,3.2) -- (ucLogin.east);
+    \draw (3.5,1.8) -- (ucRedeem.east);
+    \draw (3.5,2.2) -- (ucLogin.east);
 
     % <<include>>: Gutscheinprüfung benötigt Login
     \draw[include] (ucRedeem.north) --
@@ -138,8 +79,8 @@
     \draw[include] (ucAffLink.south) --
       node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
       (ucRegister.north);
-    \draw[include] (ucVoucherSend.south) --
-      node[left,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
+    \draw[extend] (ucVoucherSend.south) --
+      node[left,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>}
       (ucRegister.north);
 
     % <<extend>>: Gutschein einlösen -> Werber erhält Gutschein
@@ -148,10 +89,13 @@
 
     % UML-Notiz (IHK-konform, Ecke oben links), an die Beziehung gehängt
     \node[note] (note1) at (-2,-3.0) {Bedingung:\\ Gutschein entwertet};
-    \draw[dashed] (note1.west) -- ++(-0.5,0) |- ($(ucVoucherSend.north east)!0.15!(ucRedeem.south east)$);
+    \draw[dashed] (note1.west) -- ++(-0.5,0) |- ($(ucVoucherSend.north east)!0.45!(ucRedeem.south east)$);
+
+    \node[note] (note2) at (-2,-5.0) {Bedingung:\\ Registrierung über\\ Affiliate-Link};
+    \draw[dashed] (note2.south) -- ++(0,0) |- ($(ucVoucherSend.south)!0.05!(ucRegister.north)$);
 
     % ===== Legende unten rechts =====
-    \node[draw, fill=yellow!20, align=left, font=\scriptsize, anchor=north east] at (3,-9) (legend) {
+    \node[draw, fill=yellow!20, align=left, font=\scriptsize, anchor=north east] at (3,-10.3) (legend) {
         \textbf{Legende}\\[3pt]
         \begin{tabular}{@{}ll@{}}
           \raisebox{0.5ex}{\tikz{\draw[dashed,->,>=Latex,line width=1pt] (0,0)--(0.8,0);}} & <<include>> = verpflichtender Use Case \\[6pt]
