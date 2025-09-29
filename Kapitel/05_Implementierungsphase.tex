@@ -49,3 +49,10 @@ Das QR-Code- und PDF-Rendering erfolgt direkt in PHP über die Bibliotheken \tex
 So konnte ich sicherstellen, dass der komplette Prozess (vom Erstellen bis zum Versenden) serverseitig abläuft.
 
 Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im Anhang~\textit{\ref{sec:screenshots}}.
+
+\subsection{Refaktorisieren des Codes}
+\label{sec:RefaktorisierenDesCodes}
+Nach der ersten Implementierung habe ich den Code mehrfach überarbeitet und verbessert.
+Hierzu gehörte das Aufteilen großer Funktionen in kleinere, besser verständliche Einheiten.
+Außerdem habe ich wiederkehrende Muster in Hilfsfunktionen ausgelagert, um Redundanzen zu vermeiden.
+Beispielsweise habe ich die E-Mail-Versandlogik in eine eigene \texttt{Mailer}-Klasse ausgelagert, die auch das Protokollieren der versendeten Mails übernimmt.

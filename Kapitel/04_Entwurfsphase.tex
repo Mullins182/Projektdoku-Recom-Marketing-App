@@ -7,14 +7,13 @@
 \subsubsection{Schichtenmodell}
 Die Anwendung ist in drei Schichten gegliedert:
 
-\paragraph{Präsentationsschicht (Frontend).}
-Aufgabe: Darstellung der Benutzeroberfläche und Entgegennahme von Eingaben.  
+\begin{itemize}
+  \item \textbf{Präsentationsschicht (Frontend) $\rightarrow$} Darstellung der Benutzeroberfläche und Entgegennahme von Eingaben.  
 Umsetzung über statische Seiten und Skripte (\texttt{public/index.html}, \texttt{public/employee.html}, \texttt{public/redeem.html}, CSS in \texttt{public/css/styles.css}, JavaScript in \texttt{public/js/app.js} und \texttt{public/js/employee.js}).  
 Die Kommunikation erfolgt ausschließlich per \texttt{fetch} (\ac{JSON}) mit der Anwendungsschicht unter \texttt{php/api.php}.  
-Für die QR-Code-Erkennung in der Mitarbeiteransicht wird die @zxing-Library eingebunden.
+Für die QR-Code-Erkennung in der Mitarbeiteransicht wird die ZXing-Library eingebunden.
 
-\paragraph{Anwendungsschicht (Controller/Services).}
-Aufgabe: Geschäftslogik und Ablaufsteuerung.  
+  \item \textbf{Anwendungsschicht (Controller/Services) $\rightarrow$} Geschäftslogik und \\ Ablaufsteuerung.  
 \texttt{php/api.php} dient als Controller und bietet \ac{JSON}-basierte Endpunkte (\zB \textit{register}, \textit{validate\_voucher}, \textit{redeem\_voucher}, \textit{employee\_login}).  
 Die Logik ist in Service-Klassen gekapselt. Dazu gehören:  
 \texttt{php/Auth.php} (Authentifizierung),  
@@ -24,13 +23,13 @@ Die Logik ist in Service-Klassen gekapselt. Dazu gehören:
 \texttt{php/Crypto.php} (\ac{AES}-256-GCM-Verschlüsselung)  
 und \texttt{php/bootstrap.php} (Autoloading, \texttt{.env}, Zeitzone).
 
-\paragraph{Datenzugriffsschicht (Repository/Persistenz).}
-Aufgabe: Zugriff auf die MySQL-Datenbank und Persistenz.  
+  \item \textbf{Datenzugriffsschicht (Repository/Persistenz) $\rightarrow$} Zugriff auf die MySQL-Datenbank und Persistenz.  
 Dies erfolgt zentral über \texttt{php/Database.php} (PDO-Initialisierung).  
-Alle Datenbank-Operationen werden mit Prepared Statements umgesetzt (\zB in \texttt{php/api.php}, \texttt{php/Voucher.php}, \texttt{php/Mailer.php}).  
-Genutzte Tabellen sind \texttt{users}, \texttt{vouchers}, \texttt{redemptions} und \texttt{mail\_log}.  
-Sensible Felder werden verschlüsselt gespeichert (\texttt{users.email\_enc}, \texttt{users.email\_iv}, \texttt{users.email\_tag}).  
+Alle \\ Datenbank-Operationen werden mit Prepared Statements umgesetzt (\zB in \texttt{php/api.php}, \texttt{php/Voucher.php}, \texttt{php/Mailer.php}).  
+Genutzte Tabellen sind \texttt{users}, \texttt{vouchers}, \\ \texttt{redemptions} und \texttt{mail\_log}.  
+Sensible Felder werden verschlüsselt gespeichert \\ (\texttt{users.email\_enc}, \texttt{users.email\_iv}, \texttt{users.email\_tag}).  
 Zur Suche wird ein Hash verwendet (\texttt{users.email\_hash}).
+\end{itemize}
 
 \subsubsection{Schichtgrenzen und Kommunikation}
 Das Frontend ruft ausschließlich \ac{JSON}-Endpunkte der Anwendungsschicht auf.  

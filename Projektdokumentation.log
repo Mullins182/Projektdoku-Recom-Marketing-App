@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  26 SEP 2025 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  29 SEP 2025 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,6 +724,8 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowlinewidth=\dimen292
 ) (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@layerbox@background=\box107
@@ -1247,10 +1249,10 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (Projektdokumentation.toc
 
 Package babel Info: 'ngerman' activates 'ngerman' shorthands.
-(babel)             Reported on input line 38.
+(babel)             Reported on input line 35.
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 38.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 35.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [1
 
@@ -1547,40 +1549,30 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 18.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [5{C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) (Kapitel/04_Entwurfsphase.tex
-Overfull \hbox (48.67436pt too wide) in paragraph at lines 17--26
-[] []\T1/lmss/bx/n/10.95 Anwendungsschicht (Con-trol-ler/-Ser-vices).[][] \T1/lmr/m/n/10.95 Auf-ga-be: Ge-schäfts-lo-gik und Ab-lauf-steue-rung. \T1/lmtt/m/n/10.95 php/api.php
+Overfull \hbox (10.01566pt too wide) in paragraph at lines 11--15
+\T1/lmr/m/n/10.95 gen-nah-me von Ein-ga-ben. Um-set-zung über sta-ti-sche Sei-ten und Skrip-te (\T1/lmtt/m/n/10.95 public/index.html\T1/lmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (4.85521pt too wide) in paragraph at lines 17--26
-\T1/lmtt/m/n/10.95 php/Auth.php \T1/lmr/m/n/10.95 (Au-then-ti-fi-zie-rung), \T1/lmtt/m/n/10.95 php/Csrf.php \T1/lmr/m/n/10.95 ([][]-Token), \T1/lmtt/m/n/10.95 php/Voucher.php \T1/lmr/m/n/10.95 (Gutschein-
+Overfull \hbox (5.58119pt too wide) in paragraph at lines 16--25
+\T1/lmr/m/n/10.95 Service-Klassen ge-kap-selt. Da-zu ge-hö-ren: \T1/lmtt/m/n/10.95 php/Auth.php \T1/lmr/m/n/10.95 (Au-then-ti-fi-zie-rung), \T1/lmtt/m/n/10.95 php/Csrf.php
  []
 
 
-Overfull \hbox (23.37076pt too wide) in paragraph at lines 17--26
-\T1/lmr/m/n/10.95 Erstellung in-kl. QR/PDF), \T1/lmtt/m/n/10.95 php/Mailer.php \T1/lmr/m/n/10.95 (E-Mail-Versand und Pro-to-kol-lie-rung), \T1/lmtt/m/n/10.95 php/Crypto.php
+Overfull \hbox (2.3373pt too wide) in paragraph at lines 16--25
+\T1/lmr/m/n/10.95 ([][]-Token), \T1/lmtt/m/n/10.95 php/Voucher.php \T1/lmr/m/n/10.95 (Gutschein-Erstellung in-kl. QR/PDF), \T1/lmtt/m/n/10.95 php/Mailer.php
  []
 
 
-Overfull \hbox (14.162pt too wide) in paragraph at lines 28--34
-\T1/lmr/m/n/10.95 und Per-sis-tenz. Dies er-folgt zen-tral über \T1/lmtt/m/n/10.95 php/Database.php \T1/lmr/m/n/10.95 (PDO-Initialisierung). Al-le Datenbank-
- []
-
-
-Overfull \hbox (10.57515pt too wide) in paragraph at lines 28--34
-\T1/lmr/m/n/10.95 Operationen wer-den mit Pre-pa-red State-ments um-ge-setzt ([] in \T1/lmtt/m/n/10.95 php/api.php\T1/lmr/m/n/10.95 , \T1/lmtt/m/n/10.95 php/Voucher.php\T1/lmr/m/n/10.95 ,
- []
-
-
-Overfull \hbox (22.08704pt too wide) in paragraph at lines 28--34
-\T1/lmr/m/n/10.95 ble Fel-der wer-den ver-schlüs-selt ge-spei-chert (\T1/lmtt/m/n/10.95 users.email_enc\T1/lmr/m/n/10.95 , \T1/lmtt/m/n/10.95 users.email_iv\T1/lmr/m/n/10.95 , \T1/lmtt/m/n/10.95 users.email_tag\T1/lmr/m/n/10.95 ).
+Overfull \hbox (2.05785pt too wide) in paragraph at lines 26--32
+\T1/lmr/m/n/10.95 Datenbank-Operationen wer-den mit Pre-pa-red State-ments um-ge-setzt ([] in \T1/lmtt/m/n/10.95 php/api.php\T1/lmr/m/n/10.95 ,
  []
 
 
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 67.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 66.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [6
 
@@ -1589,7 +1581,7 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 67.
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 68.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 67.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [7]) (Kapitel/05_Implementierungsphase.tex (C:\Users\prakt\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -1629,7 +1621,7 @@ Overfull \hbox (5.21957pt too wide) in paragraph at lines 48--50
 
 File: Bilder/ananas_codes.png Graphic file (type png)
 <use Bilder/ananas_codes.png>
-Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 22.
+Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 21.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [11
 
@@ -1755,13 +1747,15 @@ Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 9.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [2{C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] (Tabellen/ZeitplanungKomplett.tex) (Anhang/UseCase.tex
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 27.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 103.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <13> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 27.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 53.
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 53.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 103.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <11> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 135.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <11> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 135.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 156.
 )
 
 File: Bilder/ananas_codes.png Graphic file (type png)
@@ -1781,12 +1775,12 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 37.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [5] (Anhang/Screenshots.tex
-<Bilder/screenshots/form_blank.png, id=616, 476.53032pt x 322.95656pt>
+<Bilder/screenshots/form_blank.png, id=614, 476.53032pt x 322.95656pt>
 File: Bilder/screenshots/form_blank.png Graphic file (type png)
 <use Bilder/screenshots/form_blank.png>
 Package pdftex.def Info: Bilder/screenshots/form_blank.png  used on input line 4.
 (pdftex.def)             Requested size: 364.19667pt x 246.8392pt.
-<Bilder/screenshots/form_registered.png, id=617, 494.59781pt x 471.26062pt>
+<Bilder/screenshots/form_registered.png, id=615, 494.59781pt x 471.26062pt>
 File: Bilder/screenshots/form_registered.png Graphic file (type png)
 <use Bilder/screenshots/form_registered.png>
 Package pdftex.def Info: Bilder/screenshots/form_registered.png  used on input line 11.
@@ -1798,7 +1792,7 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 15.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [6 <./Bilder/screenshots/form_blank.png>]
-<Bilder/screenshots/form_already_registered.png, id=624, 539.76656pt x 437.38406pt>
+<Bilder/screenshots/form_already_registered.png, id=622, 539.76656pt x 437.38406pt>
 File: Bilder/screenshots/form_already_registered.png Graphic file (type png)
 <use Bilder/screenshots/form_already_registered.png>
 Package pdftex.def Info: Bilder/screenshots/form_already_registered.png  used on input line 18.
@@ -1810,12 +1804,12 @@ File: Bilder/ananas_codes.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ananas_codes.png  used on input line 22.
 (pdftex.def)             Requested size: 65.4357pt x 65.44133pt.
 [7 <./Bilder/screenshots/form_registered.png>]
-<Bilder/screenshots/email_voucher.png, id=630, 420.82219pt x 430.60875pt>
+<Bilder/screenshots/email_voucher.png, id=628, 420.82219pt x 430.60875pt>
 File: Bilder/screenshots/email_voucher.png Graphic file (type png)
 <use Bilder/screenshots/email_voucher.png>
 Package pdftex.def Info: Bilder/screenshots/email_voucher.png  used on input line 26.
 (pdftex.def)             Requested size: 227.62206pt x 232.91948pt.
-<Bilder/screenshots/mail_affiliate_link.png, id=631, 806.26219pt x 513.41812pt>
+<Bilder/screenshots/mail_affiliate_link.png, id=629, 806.26219pt x 513.41812pt>
 File: Bilder/screenshots/mail_affiliate_link.png Graphic file (type png)
 <use Bilder/screenshots/mail_affiliate_link.png>
 Package pdftex.def Info: Bilder/screenshots/mail_affiliate_link.png  used on input line 33.
@@ -1846,17 +1840,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 42286 strings out of 468130
- 911756 string characters out of 5430633
- 1791612 words of memory out of 5000000
- 69871 multiletter control sequences out of 15000+600000
- 719462 words of font info for 88 fonts, out of 8000000 for 9000
+ 42399 strings out of 468130
+ 914022 string characters out of 5430633
+ 1792843 words of memory out of 5000000
+ 69980 multiletter control sequences out of 15000+600000
+ 726456 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,24n,109p,11424b,3080s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (34 pages, 972521 bytes).
+<C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/prakt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Projektdokumentation.pdf (34 pages, 1003200 bytes).
 PDF statistics:
- 940 PDF objects out of 1000 (max. 8388607)
- 279 named destinations out of 1000 (max. 500000)
- 479 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 944 PDF objects out of 1000 (max. 8388607)
+ 274 named destinations out of 1000 (max. 500000)
+ 487 words of extra memory for PDF output out of 10000 (max. 10000000)
 

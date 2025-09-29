@@ -24,31 +24,29 @@
 \contentsline {section}{\numberline {4}Entwurfsphase}{6}{section.44}%
 \contentsline {subsection}{\numberline {4.1}Architektur}{6}{subsection.45}%
 \contentsline {subsubsection}{\numberline {4.1.1}Schichtenmodell}{6}{subsubsection.46}%
-\contentsline {paragraph}{\nonumberline Präsentationsschicht (Frontend).}{6}{paragraph*.48}%
-\contentsline {paragraph}{\nonumberline Anwendungsschicht (Controller/Services).}{6}{paragraph*.50}%
-\contentsline {paragraph}{\nonumberline Datenzugriffsschicht (Repository/Persistenz).}{6}{paragraph*.52}%
-\contentsline {subsubsection}{\numberline {4.1.2}Schichtgrenzen und Kommunikation}{6}{subsubsection.53}%
-\contentsline {subsubsection}{\numberline {4.1.3}Diagramm}{7}{subsubsection.54}%
-\contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.56}%
-\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{8}{subsection.57}%
-\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{9}{subsection.131}%
-\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{11}{subsection.156}%
-\contentsline {section}{\numberline {6}Abnahmephase}{11}{section.166}%
-\contentsline {subsection}{\numberline {6.1}Test und Qualitätssicherung}{11}{subsection.167}%
-\contentsline {subsection}{\numberline {6.2}Teststrategie}{11}{subsection.168}%
-\contentsline {subsection}{\numberline {6.3}Testmethodik}{11}{subsection.169}%
-\contentsline {subsection}{\numberline {6.4}Testergebnisse}{13}{subsection.170}%
-\contentsline {subsection}{\numberline {6.5}Zusammenfassung der Testergebnisse}{14}{subsection.173}%
-\contentsline {subsection}{\numberline {6.6}Abnahme}{14}{subsection.174}%
-\contentsline {section}{\numberline {7}Fazit}{15}{section.175}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{16}{section*.177}%
-\contentsline {section}{\numberline {A}Anhang}{I}{appendix.178}%
-\contentsline {subsection}{\numberline {A.1}Lastenheft (Auszug)}{I}{subsection.179}%
-\contentsline {subsection}{\numberline {A.2}Pflichtenheft (Auszug)}{II}{subsection.196}%
-\contentsline {subsection}{\numberline {A.3}Detaillierte Zeitplanung}{III}{subsection.206}%
-\contentsline {subsection}{\numberline {A.4}Use Case-Diagramm}{IV}{subsection.207}%
-\contentsline {subsection}{\numberline {A.5}Datenbankmodell}{V}{subsection.209}%
-\contentsline {subsection}{\numberline {A.6}Screenshots der Anwendung}{VI}{subsection.211}%
-\contentsline {subsubsection}{\numberline {A.6.1}Registrierungsformular}{VI}{subsubsection.212}%
-\contentsline {subsubsection}{\numberline {A.6.2}Emails an Werber bzw.\xspace Geworbenen}{VIII}{subsubsection.216}%
+\contentsline {subsubsection}{\numberline {4.1.2}Schichtgrenzen und Kommunikation}{6}{subsubsection.47}%
+\contentsline {subsubsection}{\numberline {4.1.3}Diagramm}{7}{subsubsection.48}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.50}%
+\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{8}{subsection.51}%
+\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{9}{subsection.125}%
+\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{11}{subsection.150}%
+\contentsline {subsection}{\numberline {5.4}Refaktorisieren des Codes}{11}{subsection.160}%
+\contentsline {section}{\numberline {6}Abnahmephase}{11}{section.161}%
+\contentsline {subsection}{\numberline {6.1}Test und Qualitätssicherung}{11}{subsection.162}%
+\contentsline {subsection}{\numberline {6.2}Teststrategie}{11}{subsection.163}%
+\contentsline {subsection}{\numberline {6.3}Testmethodik}{12}{subsection.164}%
+\contentsline {subsection}{\numberline {6.4}Testergebnisse}{13}{subsection.165}%
+\contentsline {subsection}{\numberline {6.5}Zusammenfassung der Testergebnisse}{14}{subsection.168}%
+\contentsline {subsection}{\numberline {6.6}Abnahme}{14}{subsection.169}%
+\contentsline {section}{\numberline {7}Fazit}{15}{section.170}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{16}{section*.172}%
+\contentsline {section}{\numberline {A}Anhang}{I}{appendix.173}%
+\contentsline {subsection}{\numberline {A.1}Lastenheft (Auszug)}{I}{subsection.174}%
+\contentsline {subsection}{\numberline {A.2}Pflichtenheft (Auszug)}{II}{subsection.191}%
+\contentsline {subsection}{\numberline {A.3}Detaillierte Zeitplanung}{III}{subsection.201}%
+\contentsline {subsection}{\numberline {A.4}Use Case-Diagramm}{IV}{subsection.202}%
+\contentsline {subsection}{\numberline {A.5}Datenbankmodell}{V}{subsection.204}%
+\contentsline {subsection}{\numberline {A.6}Screenshots der Anwendung}{VI}{subsection.206}%
+\contentsline {subsubsection}{\numberline {A.6.1}Registrierungsformular}{VI}{subsubsection.207}%
+\contentsline {subsubsection}{\numberline {A.6.2}Emails an Werber bzw.\xspace Geworbenen}{VIII}{subsubsection.211}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
