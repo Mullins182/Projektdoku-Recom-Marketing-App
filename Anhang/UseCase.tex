@@ -8,7 +8,7 @@
   extend/.style={dashed,->,>=Latex, line width=1pt},
   note/.style={
     draw,
-    fill=yellow!20,
+    fill=yellow!40,
     font=\scriptsize,
     align=left,
     inner sep=3pt,
@@ -17,8 +17,8 @@
     minimum height=1.7cm,
     path picture={
       % gefaltete Ecke oben links (IHK-konform)
-      \draw (path picture bounding box.north west) ++(0.4,0)
-        -- ++(0,-0.4) -- (path picture bounding box.north west) -- cycle;
+      \draw (path picture bounding box.north west) ++(0.5,0)
+        -- ++(-0.5,-0.4) -- (path picture bounding box.north west) -- cycle;        
     }
   }
 ]
@@ -39,37 +39,37 @@
     }
 
     % Systemgrenze
-    \draw[thick, fill=yellow!10]
+    \draw[thick, fill=yellow!15]
         (-7,-12.1) rectangle (3,5)
-        node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!25] {Empfehlungsmarketing-App};
+        node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!33] {Empfehlungsmarketing-App};
 
     % Akteure
-    \actor{-8.5}{3}{Werber}
-    \actor{-8.5}{0}{Geworbener}
+    \actor{-8.5}{-6}{Werber}
+    \actor{-8.5}{-9}{Geworbener}
     \actor{4.5}{3}{Mitarbeiter}
 
     % Use Cases
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
     text width=5cm, align=center] (ucLogin) at (-2,3.0) {Einloggen in Mitarbeiterbereich};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=1cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=1cm,
     text width=3cm, align=center] (ucScan) at (-4.5,0.0) {Gutschein scannen};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=1cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=1cm,
     text width=3cm, align=center] (ucRedeem) at (0.5,0.0) {Gutschein entwerten};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
     text width=2.5cm, align=center] (ucAffLink) at (-4.7,-6.5) {Affiliate-Link senden};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
     text width=2cm, align=center] (ucVoucherSend) at (1.0,-6.5) {Gutschein senden};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
+    \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
     text width=5cm, align=center] (ucRegister) at (-2,-9.4) {Registrieren mit Email-Adresse};
 
     % Verbindungen zu Akteuren
-    \draw (-7.5,2.0) -- (ucRegister.west);
-    \draw (-7.5,-0.5) -- (ucRegister.west);
+    \draw (-7.5,-7.0) -- (ucRegister.west);
+    \draw (-7.5,-9.5) -- (ucRegister.west);
     \draw (4,2.2) -- (ucRedeem.east);
     \draw (4,2.2) -- (ucScan.east);
     \draw (4,2.2) -- (ucLogin.east);
@@ -83,9 +83,9 @@
       (ucLogin.south);
 
     % <<include>>: Registrierung umfasst immer Affiliate-Link und optional Gutschein senden
-    \draw[include] (ucAffLink.south) --
+    \draw[include] (ucRegister.north) --
       node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
-      (ucRegister.north);
+      (ucAffLink.south);
     \draw[extend] (ucVoucherSend.south) --
       node[left,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>}
       (ucRegister.north);
@@ -95,7 +95,7 @@
       node[midway,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>};
 
     % UML-Notiz (IHK-konform, Ecke oben links), an die Beziehung gehängt
-    \node[note] (note1) at (-4,-2.0) {Bedingung:\\ Gutschein entwertet};
+    \node[note] (note1) at (-4,-2.0) {Bedingung:\\ Gutschein wird entwertet};
     \draw[dashed] (note1.east) -- ++(0,0) |- ($(ucVoucherSend.north)!0.75!(ucRedeem.south)$);
 
     \node[note] (note2) at (-2,-4.5) {Bedingung:\\ Registrierung über\\ Affiliate-Link};
