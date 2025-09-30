@@ -52,8 +52,11 @@
     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
     text width=5cm, align=center] (ucLogin) at (-2,3.0) {Einloggen in Mitarbeiterbereich};
 
-    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
-    text width=5cm, align=center] (ucRedeem) at (-2,-1.0) {Gutschein scannen / prüfen / entwerten};
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=1cm,
+    text width=3cm, align=center] (ucScan) at (-4.5,0.0) {Gutschein scannen};
+
+    \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=1cm,
+    text width=3cm, align=center] (ucRedeem) at (0.5,0.0) {Gutschein entwerten};
 
     \node[draw, ellipse, fill=yellow!50, minimum height=1cm, minimum width=3cm,
     text width=2.5cm, align=center] (ucAffLink) at (-4.7,-6.5) {Affiliate-Link senden};
@@ -67,15 +70,19 @@
     % Verbindungen zu Akteuren
     \draw (-7.5,2.0) -- (ucRegister.west);
     \draw (-7.5,-0.5) -- (ucRegister.west);
-    \draw (3.5,1.8) -- (ucRedeem.east);
-    \draw (3.5,2.2) -- (ucLogin.east);
+    \draw (4,2.2) -- (ucRedeem.east);
+    \draw (4,2.2) -- (ucScan.east);
+    \draw (4,2.2) -- (ucLogin.east);
 
     % <<include>>: Gutscheinprüfung benötigt Login
     \draw[include] (ucRedeem.north) --
       node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
       (ucLogin.south);
+    \draw[include] (ucScan.north) --
+      node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
+      (ucLogin.south);
 
-    % <<include>>: Registrierung umfasst immer Affiliate-Link und Gutschein senden
+    % <<include>>: Registrierung umfasst immer Affiliate-Link und optional Gutschein senden
     \draw[include] (ucAffLink.south) --
       node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
       (ucRegister.north);
@@ -84,14 +91,14 @@
       (ucRegister.north);
 
     % <<extend>>: Gutschein einlösen -> Werber erhält Gutschein
-    \draw[extend] (ucVoucherSend.north east) -- (ucRedeem.south east)
+    \draw[extend] (ucVoucherSend.north) -- (ucRedeem.south)
       node[midway,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>};
 
     % UML-Notiz (IHK-konform, Ecke oben links), an die Beziehung gehängt
-    \node[note] (note1) at (-2,-3.0) {Bedingung:\\ Gutschein entwertet};
-    \draw[dashed] (note1.west) -- ++(-0.5,0) |- ($(ucVoucherSend.north east)!0.45!(ucRedeem.south east)$);
+    \node[note] (note1) at (-4,-2.0) {Bedingung:\\ Gutschein entwertet};
+    \draw[dashed] (note1.east) -- ++(0,0) |- ($(ucVoucherSend.north)!0.75!(ucRedeem.south)$);
 
-    \node[note] (note2) at (-2,-5.0) {Bedingung:\\ Registrierung über\\ Affiliate-Link};
+    \node[note] (note2) at (-2,-4.5) {Bedingung:\\ Registrierung über\\ Affiliate-Link};
     \draw[dashed] (note2.south) -- ++(0,0) |- ($(ucVoucherSend.south)!0.05!(ucRegister.north)$);
 
     % ===== Legende unten rechts =====
