@@ -55,7 +55,7 @@ Die Anwendung ist in drei Schichten gegliedert:
 \subsubsection{Schichtgrenzen und Kommunikation}
 Das Frontend ruft ausschließlich \ac{JSON}-Endpunkte der Anwendungsschicht auf.  
 Direkte Datenbankzugriffe aus dem Frontend finden nicht statt.  
-Die Anwendungsschicht greift nur über die Datenzugriffsschicht (PDO) auf die Datenbank zu.  
+Die Anwendungsschicht greift nur über die Datenzugriffsschicht (\ac{PDO}) auf die Datenbank zu.  
 Authentifizierung und Sitzungsverwaltung liegen in der Anwendungsschicht.  
 \ac{CSRF}-Schutz wird über Token realisiert.
 
