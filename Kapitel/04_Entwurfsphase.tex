@@ -1,5 +1,5 @@
 % !TEX root = ../Projektdokumentation.tex
-\section{Entwurfsphase} 
+\section{Entwurfsphase}
 \label{sec:Entwurfsphase}
 
 \subsection{Architektur}
@@ -9,54 +9,54 @@ Die Anwendung ist in drei Schichten gegliedert:
 
 \begin{itemize}
   \item \textbf{Präsentationsschicht (Frontend):}
-  \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
-  \begin{itemize} 
-    \item Darstellung der Benutzeroberfläche und Entgegennahme von Eingaben.  
-    \item Umsetzung über folgende statische Seiten und Skripte:
-      \begin{itemize}
-        \item (\texttt{public/index.html} 
-        \item \texttt{public/employee.html}
-        \item \texttt{public/redeem.html}
-        \item CSS in \texttt{public/css/styles.css}
-        \item JavaScript in \texttt{public/js/app.js} und \texttt{public/js/employee.js})
-      \end{itemize}
-    \item Die Kommunikation erfolgt ausschließlich per \texttt{fetch-API}\quelle{4} (\ac{JSON}) mit der Anwendungsschicht unter \texttt{php/api.php}.  
-    \item Für die QR-Code-Erkennung in der Mitarbeiteransicht wird die ZXing-Library eingebunden.
-  \end{itemize}
+        \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
+        \begin{itemize}
+          \item Darstellung der Benutzeroberfläche und Entgegennahme von Eingaben.
+          \item Umsetzung über folgende statische Seiten und Skripte:
+                \begin{itemize}
+                  \item (\texttt{public/index.html}
+                  \item \texttt{public/employee.html}
+                  \item \texttt{public/redeem.html}
+                  \item CSS in \texttt{public/css/styles.css}
+                  \item JavaScript in \texttt{public/js/app.js} und \texttt{public/js/employee.js})
+                \end{itemize}
+          \item Die Kommunikation erfolgt ausschließlich per \texttt{fetch-API}\quelle{4} (\ac{JSON}) mit der Anwendungsschicht unter \texttt{php/api.php}.
+          \item Für die QR-Code-Erkennung in der Mitarbeiteransicht wird die ZXing-Library eingebunden.
+        \end{itemize}
 
-  \item \textbf{Anwendungsschicht (Controller/Services):} 
-    \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
-  \begin{itemize}
-    \item Geschäftslogik und Ablaufsteuerung.  
-    \item\texttt{php/api.php} dient als Controller und bietet \ac{JSON}-basierte Endpunkte (\zB \textit{register}, \textit{validate\_voucher}, \textit{redeem\_voucher}, \textit{employee\_login}).  
-    \item Die Logik ist in Service-Klassen gekapselt. Dazu gehören:  
-      \begin{itemize} 
-        \item \texttt{php/Auth.php} (Authentifizierung)
-        \item \texttt{php/Csrf.php} (\ac{CSRF}-Token)  
-        \item \texttt{php/Voucher.php} (Gutschein-Erstellung \inkl QR/PDF)
-        \item \texttt{php/Mailer.php} (E-Mail-Versand und Protokollierung)
-        \item \texttt{php/Crypto.php} (\ac{AES}-256-GCM-Verschlüsselung)
-        \item \texttt{php/bootstrap.php} (Autoloading, \texttt{.env} Zeitzone).
-      \end{itemize}
-  \end{itemize}
-\newpage
-  \item \textbf{Datenzugriffsschicht (Repository/Persistenz):} 
-      \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
-      \begin{itemize} 
-        \item Zugriff auf die MySQL-Datenbank und Persistenz.\\  
-        Dies erfolgt zentral über \texttt{php/Database.php} (PDO-Initialisierung).  
-        \item Alle Datenbank-Operationen werden mit Prepared Statements umgesetzt (\zB in \texttt{php/api.php}, \texttt{php/Voucher.php}, \texttt{php/Mailer.php}).  
-        \item Genutzte Tabellen sind \texttt{users}, \texttt{vouchers},  \texttt{redemptions} und \texttt{mail\_log}.  
-        \item Sensible Felder werden verschlüsselt gespeichert (\texttt{users.email\_enc}, \texttt{users.email\_iv}, \texttt{users.email\_tag}).  
-        \item Zur Suche wird ein Hash verwendet (\texttt{users.email\_hash}).
-      \end{itemize}
+  \item \textbf{Anwendungsschicht (Controller/Services):}
+        \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
+        \begin{itemize}
+          \item Geschäftslogik und Ablaufsteuerung.
+          \item\texttt{php/api.php} dient als Controller und bietet \ac{JSON}-basierte Endpunkte (\zB \textit{register}, \textit{validate\_voucher}, \textit{redeem\_voucher}, \textit{employee\_login}).
+          \item Die Logik ist in Service-Klassen gekapselt. Dazu gehören:
+                \begin{itemize}
+                  \item \texttt{php/Auth.php} (Authentifizierung)
+                  \item \texttt{php/Csrf.php} (\ac{CSRF}-Token)
+                  \item \texttt{php/Voucher.php} (Gutschein-Erstellung \inkl QR/PDF)
+                  \item \texttt{php/Mailer.php} (E-Mail-Versand und Protokollierung)
+                  \item \texttt{php/Crypto.php} (\ac{AES}-256-GCM-Verschlüsselung)
+                  \item \texttt{php/bootstrap.php} (Autoloading, \texttt{.env} Zeitzone).
+                \end{itemize}
+        \end{itemize}
+        \newpage
+  \item \textbf{Datenzugriffsschicht (Repository/Persistenz):}
+        \renewcommand{\labelitemii}{$\rightarrow$} % Nur für die innere Ebene
+        \begin{itemize}
+          \item Zugriff auf die MySQL-Datenbank und Persistenz.\\
+                Dies erfolgt zentral über \texttt{php/Database.php} (PDO-Initialisierung).
+          \item Alle Datenbank-Operationen werden mit Prepared Statements umgesetzt (\zB in \texttt{php/api.php}, \texttt{php/Voucher.php}, \texttt{php/Mailer.php}).
+          \item Genutzte Tabellen sind \texttt{users}, \texttt{vouchers},  \texttt{redemptions} und \texttt{mail\_log}.
+          \item Sensible Felder werden verschlüsselt gespeichert (\texttt{users.email\_enc}, \texttt{users.email\_iv}, \texttt{users.email\_tag}).
+          \item Zur Suche wird ein Hash verwendet (\texttt{users.email\_hash}).
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{Schichtgrenzen und Kommunikation}
-Das Frontend ruft ausschließlich \ac{JSON}-Endpunkte der Anwendungsschicht auf.  
-Direkte Datenbankzugriffe aus dem Frontend finden nicht statt.  
-Die Anwendungsschicht greift nur über die Datenzugriffsschicht (\ac{PDO}) auf die Datenbank zu.  
-Authentifizierung und Sitzungsverwaltung liegen in der Anwendungsschicht.  
+Das Frontend ruft ausschließlich \ac{JSON}-Endpunkte der Anwendungsschicht auf.
+Direkte Datenbankzugriffe aus dem Frontend finden nicht statt.
+Die Anwendungsschicht greift nur über die Datenzugriffsschicht (\ac{PDO}) auf die Datenbank zu.
+Authentifizierung und Sitzungsverwaltung liegen in der Anwendungsschicht.
 \ac{CSRF}-Schutz wird über Token realisiert.
 
 \subsubsection{Diagramm}
@@ -66,18 +66,18 @@ Zur Visualisierung des Aufbaus dient Abbildung~\ref{fig:architektur_schichten}.
   \centering
   \begin{tikzpicture}[node distance=0cm,outer sep=0pt]
     % Präsentation
-    \node[draw, fill=blue!15, minimum width=10cm, minimum height=2cm, align=center] (frontend) {Präsentationsschicht\\[0.2cm] 
-    HTML, CSS, JavaScript, QR-Code-Scanner};
-    
+    \node[draw, fill=blue!15, minimum width=10cm, minimum height=2cm, align=center] (frontend) {Präsentationsschicht\\[0.2cm]
+      HTML, CSS, JavaScript, QR-Code-Scanner};
+
     % Anwendung
-    \node[draw, fill=green!15, minimum width=10cm, minimum height=3cm, align=center, below=of frontend, yshift=-0.5cm] (application) {Anwendungsschicht\\[0.2cm] 
-    \texttt{api.php}, Controller \& Services\\
-    (Auth, Voucher, Mailer, Crypto, Csrf)};
-    
+    \node[draw, fill=green!15, minimum width=10cm, minimum height=3cm, align=center, below=of frontend, yshift=-0.5cm] (application) {Anwendungsschicht\\[0.2cm]
+      \texttt{api.php}, Controller \& Services\\
+      (Auth, Voucher, Mailer, Crypto, Csrf)};
+
     % Daten
-    \node[draw, fill=orange!15, minimum width=10cm, minimum height=2cm, align=center, below=of application, yshift=-0.5cm] (database) {Datenzugriffsschicht\\[0.2cm] 
-    \texttt{Database.php}, MySQL (users, vouchers, redemptions, mail\_log)};
-    
+    \node[draw, fill=orange!15, minimum width=10cm, minimum height=2cm, align=center, below=of application, yshift=-0.5cm] (database) {Datenzugriffsschicht\\[0.2cm]
+      \texttt{Database.php}, MySQL (users, vouchers, redemptions, mail\_log)};
+
     % Labels
     \node[below=of database, yshift=0.5cm] (label) {};
   \end{tikzpicture}

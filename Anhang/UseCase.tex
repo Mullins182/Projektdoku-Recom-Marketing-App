@@ -1,47 +1,47 @@
 
 \vspace{7pt}
 \begin{center}
-\begin{tikzpicture}[
-  font=\sffamily\itshape\fontsize{13}{15}\selectfont,
-  actor/.style={draw, minimum size=1cm},
-  include/.style={dashed,->,>=Latex, line width=1pt},
-  extend/.style={dashed,->,>=Latex, line width=1pt},
-  note/.style={
-    draw,
-    fill=yellow!40,
-    font=\scriptsize,
-    align=left,
-    inner sep=3pt,
-    rectangle,
-    minimum width=2.7cm,
-    minimum height=1.7cm,
-    path picture={
-      % gefaltete Ecke oben links (IHK-konform)
-      \draw (path picture bounding box.north west) ++(0.5,0)
-        -- ++(-0.5,-0.4) -- (path picture bounding box.north west) -- cycle;        
-    }
-  }
-]
+  \begin{tikzpicture}[
+      font=\sffamily\itshape\fontsize{13}{15}\selectfont,
+      actor/.style={draw, minimum size=1cm},
+      include/.style={dashed,->,>=Latex, line width=1pt},
+      extend/.style={dashed,->,>=Latex, line width=1pt},
+      note/.style={
+          draw,
+          fill=yellow!40,
+          font=\scriptsize,
+          align=left,
+          inner sep=3pt,
+          rectangle,
+          minimum width=2.7cm,
+          minimum height=1.7cm,
+          path picture={
+              % gefaltete Ecke oben links (IHK-konform)
+              \draw (path picture bounding box.north west) ++(0.5,0)
+              -- ++(-0.5,-0.4) -- (path picture bounding box.north west) -- cycle;
+            }
+        }
+    ]
 
     % Funktion zum Zeichnen eines Strichmännchens
     \newcommand{\actor}[3]{%
-        % Kopf
-        \draw (#1,#2) circle (0.3);
-        % Körper
-        \draw (#1,#2-0.3) -- (#1,#2-1);
-        % Arme
-        \draw (#1-0.5,#2-0.6) -- (#1+0.5,#2-0.6);
-        % Beine
-        \draw (#1,#2-1) -- (#1-0.5,#2-1.5);
-        \draw (#1,#2-1) -- (#1+0.5,#2-1.5);
-        % Name
-        \node[below=1.7cm] at (#1,#2) {#3};
+      % Kopf
+      \draw (#1,#2) circle (0.3);
+      % Körper
+      \draw (#1,#2-0.3) -- (#1,#2-1);
+      % Arme
+      \draw (#1-0.5,#2-0.6) -- (#1+0.5,#2-0.6);
+      % Beine
+      \draw (#1,#2-1) -- (#1-0.5,#2-1.5);
+      \draw (#1,#2-1) -- (#1+0.5,#2-1.5);
+      % Name
+      \node[below=1.7cm] at (#1,#2) {#3};
     }
 
     % Systemgrenze
     \draw[thick, fill=yellow!15]
-        (-7,-12.1) rectangle (3,5)
-        node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!33] {Empfehlungsmarketing-App};
+    (-7,-12.1) rectangle (3,5)
+    node[above,xshift=-5cm, yshift=-0.8cm, fill=yellow!33] {Empfehlungsmarketing-App};
 
     % Akteure
     \actor{-8.5}{-6}{Werber}
@@ -50,22 +50,22 @@
 
     % Use Cases
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
-    text width=5cm, align=center] (ucLogin) at (-2,3.0) {Einloggen in Mitarbeiterbereich};
+      text width=5cm, align=center] (ucLogin) at (-2,3.0) {Einloggen in Mitarbeiterbereich};
 
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=1cm,
-    text width=3cm, align=center] (ucScan) at (-4.5,0.0) {Gutschein scannen};
+      text width=3cm, align=center] (ucScan) at (-4.5,0.0) {Gutschein scannen};
 
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=1cm,
-    text width=3cm, align=center] (ucRedeem) at (0.5,0.0) {Gutschein entwerten};
+      text width=3cm, align=center] (ucRedeem) at (0.5,0.0) {Gutschein entwerten};
 
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
-    text width=2.5cm, align=center] (ucAffLink) at (-4.7,-6.5) {Affiliate-Link senden};
+      text width=2.5cm, align=center] (ucAffLink) at (-4.7,-6.5) {Affiliate-Link senden};
 
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
-    text width=2cm, align=center] (ucVoucherSend) at (1.0,-6.5) {Gutschein senden};
+      text width=2cm, align=center] (ucVoucherSend) at (1.0,-6.5) {Gutschein senden};
 
     \node[draw, ellipse, fill=orange!45, minimum height=1cm, minimum width=3cm,
-    text width=5cm, align=center] (ucRegister) at (-2,-9.4) {Registrieren mit Email-Adresse};
+      text width=5cm, align=center] (ucRegister) at (-2,-9.4) {Registrieren mit Email-Adresse};
 
     % Verbindungen zu Akteuren
     \draw (-7.5,-7.0) -- (ucRegister.west);
@@ -76,23 +76,23 @@
 
     % <<include>>: Gutscheinprüfung benötigt Login
     \draw[include] (ucRedeem.north) --
-      node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
-      (ucLogin.south);
+    node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
+    (ucLogin.south);
     \draw[include] (ucScan.north) --
-      node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
-      (ucLogin.south);
+    node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
+    (ucLogin.south);
 
     % <<include>>: Registrierung umfasst immer Affiliate-Link und optional Gutschein senden
     \draw[include] (ucRegister.north) --
-      node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
-      (ucAffLink.south);
+    node[right,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<include>>}
+    (ucAffLink.south);
     \draw[extend] (ucVoucherSend.south) --
-      node[left,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>}
-      (ucRegister.north);
+    node[left,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>}
+    (ucRegister.north);
 
     % <<extend>>: Gutschein einlösen -> Werber erhält Gutschein
     \draw[extend] (ucVoucherSend.north) -- (ucRedeem.south)
-      node[midway,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>};
+    node[midway,sloped,above]{\fontsize{11}{13}\selectfont\bfseries <<extend>>};
 
     % UML-Notiz (IHK-konform, Ecke oben links), an die Beziehung gehängt
     \node[note] (note1) at (-4,-2.0) {Bedingung:\\ Gutschein wird entwertet};
@@ -103,12 +103,12 @@
 
     % ===== Legende unten rechts =====
     \node[draw, fill=yellow!20, align=left, font=\scriptsize, anchor=north east] at (3,-10.3) (legend) {
-        \textbf{Legende}\\[3pt]
-        \begin{tabular}{@{}ll@{}}
-          \raisebox{0.5ex}{\tikz{\draw[dashed,->,>=Latex,line width=1pt] (0,0)--(0.8,0);}} & <<include>> = verpflichtender Use Case \\[6pt]
-          \raisebox{0.5ex}{\tikz{\draw[dashed,->,>=Latex,line width=1pt] (0,0)--(0.8,0);}} & <<extend>> = optionaler Use Case \\
-        \end{tabular}
+      \textbf{Legende}\\[3pt]
+      \begin{tabular}{@{}ll@{}}
+        \raisebox{0.5ex}{\tikz{\draw[dashed,->,>=Latex,line width=1pt] (0,0)--(0.8,0);}} & <<include>> = verpflichtender Use Case \\[6pt]
+        \raisebox{0.5ex}{\tikz{\draw[dashed,->,>=Latex,line width=1pt] (0,0)--(0.8,0);}} & <<extend>> = optionaler Use Case       \\
+      \end{tabular}
     };
 
-\end{tikzpicture}
+  \end{tikzpicture}
 \end{center}

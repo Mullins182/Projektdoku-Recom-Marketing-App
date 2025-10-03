@@ -11,79 +11,79 @@ Zur Gewährleistung einer konsistenten und verständlichen Verwendung von Begrif
 \end{itemize}
 Durch diese Vereinheitlichung soll die Lesbarkeit und Nachvollziehbarkeit der Dokumentation verbessert werden.
 
-\subsection{Projektumfeld} 
+\subsection{Projektumfeld}
 \label{sec:Projektumfeld}
 \begin{itemize}
-	\item Mein Praktikumsbetrieb ist die Firma ananas.codes e.K., welche im Bereich Webentwicklung und Zeiterfassungssysteme tätig ist. Die Mitarbeiteranzahl beträgt aktuell acht.
-	\item Der Auftraggeber ist die Colibri Contactlinsen und Brillen GmbH, welche aktuell eine Filiale und eine Zweigstelle in Lübeck hat und insgesamt vierzig Mitarbeiter beschäftigt.
+    \item Mein Praktikumsbetrieb ist die Firma ananas.codes e.K., welche im Bereich Webentwicklung und Zeiterfassungssysteme tätig ist. Die Mitarbeiteranzahl beträgt aktuell acht.
+    \item Der Auftraggeber ist die Colibri Contactlinsen und Brillen GmbH, welche aktuell eine Filiale und eine Zweigstelle in Lübeck hat und insgesamt vierzig Mitarbeiter beschäftigt.
 \end{itemize}
 
 
-\subsection{Projektziel} 
+\subsection{Projektziel}
 \label{sec:Projektziel}
 \begin{itemize}
-	\item Es geht um die Entwicklung einer Empfehlungsmarketing-Webanwendung.
-	\item Das Ziel des Projekts war die Konzeption, Entwicklung und Einführung einer webbasierten Empfehlungsmarketing-Applikation für einen realen Kundenbetrieb.
-    Die Anwendung soll es ermöglichen:
-    \begin{itemize}
-    \item Kunden über einen Registrierungsprozess in ein Empfehlungsprogramm aufzunehmen.
-    \item Empfehlungslinks inklusive QR-Codes zu generieren und per E-Mail zu versenden.
-    \item Gutscheine automatisch auszustellen und Einlösungen im Mitarbeiterbereich vorzunehmen.
-    \item Den gesamten Prozess sicher, \acs{DSGVO} konform und plattformunabhängig abzuwickeln.    
-    \end{itemize}
-Die Entwicklung erfolgte als eigenständiges Projekt im Rahmen der Abschlussprüfung, orientiert an den Phasen des Wasserfallmodells.
+    \item Es geht um die Entwicklung einer Empfehlungsmarketing-Webanwendung.
+    \item Das Ziel des Projekts war die Konzeption, Entwicklung und Einführung einer webbasierten Empfehlungsmarketing-Applikation für einen realen Kundenbetrieb.
+          Die Anwendung soll es ermöglichen:
+          \begin{itemize}
+              \item Kunden über einen Registrierungsprozess in ein Empfehlungsprogramm aufzunehmen.
+              \item Empfehlungslinks inklusive QR-Codes zu generieren und per E-Mail zu versenden.
+              \item Gutscheine automatisch auszustellen und Einlösungen im Mitarbeiterbereich vorzunehmen.
+              \item Den gesamten Prozess sicher, \acs{DSGVO} konform und plattformunabhängig abzuwickeln.
+          \end{itemize}
+          Die Entwicklung erfolgte als eigenständiges Projekt im Rahmen der Abschlussprüfung, orientiert an den Phasen des Wasserfallmodells.
 \end{itemize}
 
-\subsection{Projektbegründung} 
+\subsection{Projektbegründung}
 \label{sec:Projektbegruendung}
 \begin{itemize}
-	\item Gewinnung von Neukunden durch Affiliates\quelle{1}.
-	\item Der Auftraggeber möchte über solch eine moderne Form der Neukundengewinnung verfügen.
-	\item Die Branchen-Software des Auftraggebers unterstützt kein Empfehlungsmarketing.
+    \item Gewinnung von Neukunden durch Affiliates\quelle{1}.
+    \item Der Auftraggeber möchte über solch eine moderne Form der Neukundengewinnung verfügen.
+    \item Die Branchen-Software des Auftraggebers unterstützt kein Empfehlungsmarketing.
 \end{itemize}
 
 
-\subsection{Projektschnittstellen} 
+\subsection{Projektschnittstellen}
 \label{sec:Projektschnittstellen}
-Die Anwendung besteht aus einem webbasierten Frontend (\ac{HTML}, \ac{CSS}, JavaScript, Bootstrap\quelle{3}) und einem serverseitigen Backend (\ac{PHP}, Composer\quelle{2}, MySQL\quelle{7}).  
-Die Kommunikation zwischen Frontend und Backend erfolgt über die \texttt{Fetch-API\quelle{4}} mittels \ac{HTTPS}-Requests.  
-Daten werden dabei im \ac{JSON}-Format ausgetauscht.  
+Die Anwendung besteht aus einem webbasierten Frontend (\ac{HTML}, \ac{CSS}, JavaScript, Bootstrap\quelle{3}) und einem serverseitigen Backend (\ac{PHP}, Composer\quelle{2}, MySQL\quelle{7}).
+Die Kommunikation zwischen Frontend und Backend erfolgt über die \texttt{Fetch-API\quelle{4}} mittels \ac{HTTPS}-Requests.
+Daten werden dabei im \ac{JSON}-Format ausgetauscht.
 
 \begin{itemize}
     \item \textbf{Frontend $\longrightarrow$ Backend:}
-    \begin{itemize}
-        \item[$\rightarrow$] Über \texttt{fetch()}-Aufrufe werden REST-ähnliche Endpunkte in \texttt{api.php} angesprochen.
-        \item[$\rightarrow$] Scanner-Funktion: Im Mitarbeiterbereich wird ein QR-Code-Scanner (\texttt{@zxing/browser} Bibliothek) genutzt, um Gutscheincodes zu erfassen.
-    \end{itemize}
+          \begin{itemize}
+              \item[$\rightarrow$] Über \texttt{fetch()}-Aufrufe werden REST-ähnliche Endpunkte in \texttt{api.php} angesprochen.
+              \item[$\rightarrow$] Scanner-Funktion: Im Mitarbeiterbereich wird ein QR-Code-Scanner (\texttt{@zxing/browser} Bibliothek) genutzt, um Gutscheincodes zu erfassen.
+          \end{itemize}
 
     \item \textbf{Backend $\longrightarrow$ Datenbank / interne Systeme:}
-    \begin{itemize}
-        \item[$\rightarrow$] Speicherung und Validierung von Benutzer- und Gutscheindaten in einer Datenbank.
-        \item[$\rightarrow$] Prüfung und Generierung eindeutiger Referral-Codes ohne Kollision.
-        \item[$\rightarrow$] Hashing und Fingerprinting von E-Mail-Adressen für Datenschutz.
-        \item[$\rightarrow$] Versand von E-Mails (inklusive QR-Code-Anhang) über ein internes Mailer-System.
-    \end{itemize}
+          \begin{itemize}
+              \item[$\rightarrow$] Speicherung und Validierung von Benutzer- und Gutscheindaten in einer Datenbank.
+              \item[$\rightarrow$] Prüfung und Generierung eindeutiger Referral-Codes ohne Kollision.
+              \item[$\rightarrow$] Hashing und Fingerprinting von E-Mail-Adressen für Datenschutz.
+              \item[$\rightarrow$] Versand von E-Mails (inklusive QR-Code-Anhang) über ein internes Mailer-System.
+          \end{itemize}
 
     \item \textbf{Genehmigung:}
-    \begin{itemize}
-        \item[$\rightarrow$] Das Projekt wird vom Chef meines Praktikumsbetriebs genehmigt.
-    \end{itemize}
+          \begin{itemize}
+              \item[$\rightarrow$] Das Projekt wird vom Chef meines Praktikumsbetriebs genehmigt.
+          \end{itemize}
 
     \item \textbf{Benutzer der Anwendung:}
-    \begin{itemize}
-        \item[$\rightarrow$] Werber, die sich registrieren und ihren Empfehlungslink teilen, um Gutscheine zu erhalten.
-        \item[$\rightarrow$] Geworbene, die sich registrieren um ihren Empfehlungslink und einen Gutschein zu erhalten.
-        \item[$\rightarrow$] Mitarbeiter, die Gutscheincodes scannen und einlösen, wenn diese erfolgreich validiert wurden.
-    \end{itemize}
+          \begin{itemize}
+              \item[$\rightarrow$] Werber, die sich registrieren und ihren Empfehlungslink teilen, um Gutscheine zu erhalten.
+              \item[$\rightarrow$] Geworbene, die sich registrieren um ihren Empfehlungslink und einen Gutschein zu erhalten.
+              \item[$\rightarrow$] Mitarbeiter, die Gutscheincodes scannen und einlösen, wenn diese erfolgreich validiert wurden.
+          \end{itemize}
 
     \item \textbf{Präsentation der Ergebnisse:}
-    \begin{itemize}
-        \item[$\rightarrow$] Die Projektergebnisse werden meinem Chef präsentiert.
-    \end{itemize}
+          \begin{itemize}
+              \item[$\rightarrow$] Die Projektergebnisse werden meinem Chef präsentiert.
+          \end{itemize}
 \end{itemize}
 
-\subsection{Projektabgrenzung} 
+\subsection{Projektabgrenzung}
 \label{sec:Projektabgrenzung}
 \begin{itemize}
-	\item Meine Projektarbeit umfasst die Entwicklung des Frontend und Backend der Anwendung, sowie das Testen und die abschließende Abnahme durch meinen Chef. Der Rollout beim Kunden und das Corporate Design sind nicht Bestandteil meiner Projektarbeit.
+    \item Meine Projektarbeit umfasst die Entwicklung des Frontend und Backend der Anwendung, sowie das Testen und die abschließende Abnahme durch meinen Chef. Der Rollout beim Kunden und das Corporate Design sind nicht Bestandteil meiner Projektarbeit.
 \end{itemize}

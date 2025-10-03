@@ -1,5 +1,5 @@
 % !TEX root = ../Projektdokumentation.tex
-\section{Abnahmephase} 
+\section{Abnahmephase}
 \label{sec:Abnahmephase}
 
 \subsection{Test und Qualitätssicherung}
@@ -7,8 +7,8 @@
 \subsection{Teststrategie}
 \begin{itemize}
   \item Da es sich um ein Ausbildungsprojekt handelt und der Fokus auf der              funktionalen Umsetzung lag,
-habe ich in dieser Projektarbeit ausschließlich manuelle Tests durchgeführt.
-Automatisierte Tests waren nicht Bestandteil des Projektplans.
+        habe ich in dieser Projektarbeit ausschließlich manuelle Tests durchgeführt.
+        Automatisierte Tests waren nicht Bestandteil des Projektplans.
 \end{itemize}
 
 \subsection{Testmethodik}
@@ -18,62 +18,62 @@ Für jeden Use Case habe ich die relevanten Eingaben und erwarteten Ausgaben def
 Die Tests habe ich anschließend schrittweise im Browser und über direkte API-Aufrufe geprüft.
 
 \begin{itemize}
-    \item \textbf{Registrierung}: Formular mit gültigen und ungültigen E-Mail-Adressen getestet, um Eingabevalidierung zu prüfen.
-    \item \textbf{Login}: Sowohl korrekte als auch falsche Zugangsdaten eingegeben, um Fehlermeldungen zu validieren.
-    \item \textbf{Gutschein-Erstellung}: Test mit verschiedenen Rabattwerten und Ablaufdaten; anschließend Überprüfung, ob der Gutschein in der Datenbank gespeichert wurde.
-    \item \textbf{Gutschein-Einlösung}: QR-Code mit der Mitarbeiteransicht gescannt und geprüft, ob die Einlösung korrekt im Backend protokolliert wird.
-    \item \textbf{E-Mail-Versand}: Kontrolle, ob nach erfolgreicher Gutschein-Erstellung eine E-Mail mit PDF-Anhang und QR-Code beim Nutzer ankommt.
+  \item \textbf{Registrierung}: Formular mit gültigen und ungültigen E-Mail-Adressen getestet, um Eingabevalidierung zu prüfen.
+  \item \textbf{Login}: Sowohl korrekte als auch falsche Zugangsdaten eingegeben, um Fehlermeldungen zu validieren.
+  \item \textbf{Gutschein-Erstellung}: Test mit verschiedenen Rabattwerten und Ablaufdaten; anschließend Überprüfung, ob der Gutschein in der Datenbank gespeichert wurde.
+  \item \textbf{Gutschein-Einlösung}: QR-Code mit der Mitarbeiteransicht gescannt und geprüft, ob die Einlösung korrekt im Backend protokolliert wird.
+  \item \textbf{E-Mail-Versand}: Kontrolle, ob nach erfolgreicher Gutschein-Erstellung eine E-Mail mit PDF-Anhang und QR-Code beim Nutzer ankommt.
 \end{itemize}
 \clearpage
 
 \subsection{Testergebnisse}
-\label{sec:Testergebnisse}
+\label{sec:Testergebnisse1}
 Alle in der Testphase definierten Use Cases konnten erfolgreich und ohne kritische Fehler durchlaufen werden.
 Kleinere Darstellungsprobleme im Firefox wurden durch Anpassung des CSS behoben.
 Die Anwendung erfüllt damit die funktionalen Anforderungen aus der Planungsphase.
 
 \begin{center}
-\captionof{table}{Testergebnisse Registrierung und Gutschein-Erstellung}
-\label{tab:testergebnisse1}
-\begin{tabularx}{\textwidth}{|L{1.2cm}|X|L{3.2cm}|L{3.2cm}|L{1.6cm}|}
-\hline
-\textbf{ID} & \textbf{Beschreibung} & \textbf{Eingabe/Aktion} & \textbf{Erwartetes Ergebnis} & \textbf{Status} \\
-\hline
-T-001 & Registrierung mit gültigen Daten & Gültige E-Mail eingeben, Formular absenden & Bestätigung im Frontend, QR-Code per Mail & bestanden \\
-\hline
-T-002 & Registrierung mit ungültiger E-Mail & Ungültige E-Mail eingeben, Formular absenden & Fehlermeldung „Bitte gültige E-Mail“ & bestanden \\
-\hline
-T-003 & Gutschein-Erstellung ohne Ablaufdatum & Rabatt 20\% auswählen, kein Ablaufdatum & Gutschein gespeichert, PDF mit QR-Code per Mail & bestanden \\
-\hline
-T-004 & Gutschein-Erstellung mit Ablaufdatum & Rabatt 10\% auswählen, Ablaufdatum setzen & Gutschein gespeichert mit Ablaufdatum, PDF per Mail & bestanden \\
-\hline
-\end{tabularx}
+  \captionof{table}{Testergebnisse Registrierung und Gutschein-Erstellung}
+  \label{tab:testergebnisse1}
+  \begin{tabularx}{\textwidth}{|L{1.2cm}|X|L{3.2cm}|L{3.2cm}|L{1.6cm}|}
+    \hline
+    \textbf{ID} & \textbf{Beschreibung}                 & \textbf{Eingabe/Aktion}                      & \textbf{Erwartetes Ergebnis}                        & \textbf{Status} \\
+    \hline
+    T-001       & Registrierung mit gültigen Daten      & Gültige E-Mail eingeben, Formular absenden   & Bestätigung im Frontend, QR-Code per Mail           & bestanden       \\
+    \hline
+    T-002       & Registrierung mit ungültiger E-Mail   & Ungültige E-Mail eingeben, Formular absenden & Fehlermeldung „Bitte gültige E-Mail“                & bestanden       \\
+    \hline
+    T-003       & Gutschein-Erstellung ohne Ablaufdatum & Rabatt 20\% auswählen, kein Ablaufdatum      & Gutschein gespeichert, PDF mit QR-Code per Mail     & bestanden       \\
+    \hline
+    T-004       & Gutschein-Erstellung mit Ablaufdatum  & Rabatt 10\% auswählen, Ablaufdatum setzen    & Gutschein gespeichert mit Ablaufdatum, PDF per Mail & bestanden       \\
+    \hline
+  \end{tabularx}
 \end{center}
 
 \newpage
 
 \begin{center}
-\captionof{table}{Testergebnisse Einlösung, Sicherheit und Layout}
-\label{tab:testergebnisse2}
-\begin{tabularx}{\textwidth}{|L{1.2cm}|X|L{3.2cm}|L{3.2cm}|L{1.6cm}|}
-\hline
-\textbf{ID} & \textbf{Beschreibung} & \textbf{Eingabe/Aktion} & \textbf{Erwartetes Ergebnis} & \textbf{Status} \\
-\hline
-T-005 & Gutschein-Einlösung durch Mitarbeiter & QR-Code scannen und bestätigen & Eintrag in DB redemptions, Anzeige „eingelöst“ & bestanden \\
-\hline
-T-006 & Gutschein-Einlösung mit ungültigem Code & Falschen Code eingeben & Fehlermeldung „Ungültig/abgelaufen“ & bestanden \\
-\hline
-T-007 & E-Mail-Versand bei Gutschein-Erstellung & Gutschein anlegen & Eintrag in DB mail\_log, E-Mail erhalten & bestanden \\
-\hline
-T-008 & \ac{CSRF}-Schutzprüfung & Formular ohne gültigen Token absenden & Fehlermeldung im Frontend, kein DB-Eintrag & bestanden \\
-\hline
-T-009 & Responsives Layout & Anwendung auf Smartphone öffnen, in allen gängigen Browsern & Inhalte lesbar, Elemente innerhalb des Viewports, QR-Scanner funktioniert & bestanden \\
-\hline
-\end{tabularx}
+  \captionof{table}{Testergebnisse Einlösung, Sicherheit und Layout}
+  \label{tab:testergebnisse2}
+  \begin{tabularx}{\textwidth}{|L{1.2cm}|X|L{3.2cm}|L{3.2cm}|L{1.6cm}|}
+    \hline
+    \textbf{ID} & \textbf{Beschreibung}                   & \textbf{Eingabe/Aktion}                                     & \textbf{Erwartetes Ergebnis}                                              & \textbf{Status} \\
+    \hline
+    T-005       & Gutschein-Einlösung durch Mitarbeiter   & QR-Code scannen und bestätigen                              & Eintrag in DB redemptions, Anzeige „eingelöst“                            & bestanden       \\
+    \hline
+    T-006       & Gutschein-Einlösung mit ungültigem Code & Falschen Code eingeben                                      & Fehlermeldung „Ungültig/abgelaufen“                                       & bestanden       \\
+    \hline
+    T-007       & E-Mail-Versand bei Gutschein-Erstellung & Gutschein anlegen                                           & Eintrag in DB mail\_log, E-Mail erhalten                                  & bestanden       \\
+    \hline
+    T-008       & \ac{CSRF}-Schutzprüfung                 & Formular ohne gültigen Token absenden                       & Fehlermeldung im Frontend, kein DB-Eintrag                                & bestanden       \\
+    \hline
+    T-009       & Responsives Layout                      & Anwendung auf Smartphone öffnen, in allen gängigen Browsern & Inhalte lesbar, Elemente innerhalb des Viewports, QR-Scanner funktioniert & bestanden       \\
+    \hline
+  \end{tabularx}
 \end{center}
 
 \subsection{Zusammenfassung der Testergebnisse}
-\label{sec:Testergebnisse}
+\label{sec:Testergebnisse2}
 Alle definierten Testfälle konnten erfolgreich abgeschlossen werden.
 Die Tests haben gezeigt, dass die Anwendung die in der Anforderungsdefinition festgelegten Funktionen zuverlässig umsetzt.
 Kleinere Darstellungsprobleme im Firefox wurden während der Testphase behoben, sodass die Anwendung nun in gängigen Browsern ohne Einschränkungen nutzbar ist.
